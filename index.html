@@ -32,8 +32,12 @@
             A bank is a financial institution accepts deposits from public and creates credit. For
             all of your needs.
           </p>
+
           <button>Read More</button>
-          <a href="#form"><button>Get started</button></a>
+
+          <form action="#form">
+            <button type="submit">Get started</button>
+          </form>
         </div>
 
         <img src="/images/education-block/illustration.png" alt="img_writing" width="403" />
@@ -60,7 +64,6 @@
       <section class="shy-block" id="shy">
         <div class="shy-block____title">
           <h2>Shy shoose us?</h2>
-          <span>___</span>
         </div>
         <div>
           <div class="shy-block____item">
@@ -122,7 +125,7 @@
             <img width="270" height="364" src="/images/courses-block/desing.png" alt="desing" />
             <p>DESIGN</p>
             <p>Learn Photoshop title</p>
-            <span>____</span>
+            <span class="courses-block___item-underline"></span>
             <p>$260</p>
             <s>$360</s>
             <div>
@@ -138,7 +141,7 @@
             <img width="270" height="364" src="/images/courses-block/marketing.png" alt="desing" />
             <p>Marketing</p>
             <p>Learn Photoshop title trun...</p>
-            <span>____</span>
+            <span class="courses-block___item-underline"></span>
             <p>$260</p>
             <s>$360</s>
             <div>
@@ -159,7 +162,7 @@
             />
             <p>Web design</p>
             <p>Learn Photoshop</p>
-            <span>____</span>
+            <span class="courses-block___item-underline"></span>
             <p>$260</p>
             <s>$360</s>
             <div>
@@ -192,7 +195,6 @@
           <div class="tour-block____right-title">
             <p>UNIVERSOTY DESCRIPTION</p>
             <h2>Take a tour</h2>
-            <span>____</span>
           </div>
 
           <div class="tour-block____right-info">
@@ -207,15 +209,13 @@
               </p>
             </div>
 
-            <div>
-              <div class="tour-block____right-circle"></div>
-              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
-              <div class="tour-block____description-circle"></div>
-              <p>
+            <ul>
+              <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</li>
+              <li>
                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                 laboriosam, nisi ut aliquid ex ea commodi consequatur?
-              </p>
-            </div>
+              </li>
+            </ul>
 
             <button>Read More</button>
 
@@ -229,7 +229,6 @@
         <div class="business-block____left">
           <div class="business-block____left-title">
             <h2>Why shoose us?</h2>
-            <span>____</span>
           </div>
 
           <div class="business-block____left-item">
@@ -332,9 +331,12 @@
         <div class="business-block____right">
           <p>FEATURED</p>
           <div class="business-block____right-remaining">
-            <p>$213 Days</p>
-            <p>23 Hours</p>
-            <p>59 Min</p>
+            <p>$213</p>
+            <p>Days</p>
+            <p>23</p>
+            <p>Hours</p>
+            <p>59</p>
+            <p>Min</p>
           </div>
           <img width="328" height="380" src="/images/courses-block/desing.png" alt="desing" />
           <div class="business-block____right-panel">
@@ -367,7 +369,6 @@
 
       <section class="prefer-block" id="prefer">
         <h2>Which one do you prefer?</h2>
-        <span>____</span>
         <p>
           Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
           quasiarchitecto beatae vitae dicta sunt explicabo.
@@ -416,7 +417,6 @@
 
         <div class="customers-block____info">
           <h2>Our great customers</h2>
-          <span>____</span>
           <img src="/images/customers-block/quotes.png" alt="quotes" />
           <div>
             <p>
@@ -430,11 +430,11 @@
           </div>
 
           <div class="customers-block____info-circles">
-            <img src="/images/customers-block/circle-blue.png" alt="circle-blue" />
-            <img src="/images/customers-block/circle-blue.png" alt="circle-blue" />
-            <img src="/images/customers-block/circle-purple.png" alt="circle-purple" />
-            <img src="/images/customers-block/circle-blue.png" alt="circle-blue" />
-            <img src="/images/customers-block/circle-blue.png" alt="circle-blue" />
+            <div class="customers-block____info-circles-circle"></div>
+            <div class="customers-block____info-circles-circle"></div>
+            <div class="customers-block____info-circles-circle"></div>
+            <div class="customers-block____info-circles-circle"></div>
+            <div class="customers-block____info-circles-circle"></div>
           </div>
         </div>
       </section>
@@ -458,7 +458,10 @@
               architecto beatae vitae dicta sunt explicabo.
             </p>
           </div>
-          <a href="#form"><button>Apply Now</button></a>
+          <form action="#form">
+            <button>Apply Now</button>
+          </form>
+
           <button>Request Service</button>
         </div>
 
@@ -512,7 +515,6 @@
       <section class="blog-block">
         <div class="blog-block____title">
           <h2>Latest Blog</h2>
-          <span>____</span>
         </div>
         <div class="blog-block____box">
           <div class="blog-block____box-left">
@@ -549,28 +551,35 @@
         <input type="email" placeholder="Enter your email..." />
         <button type="submit">Send</button>
       </form>
-
+    </main>
+    <footer>
       <section class="sources-block">
         <svg width="53.12px" height="24px">
           <use xlink:href="images/sprite.svg#union-icon"></use>
         </svg>
         <div class="sources-block-item">
           <h3>Company</h3>
-          <p>About Company</p>
-          <p>Feature Course</p>
-          <p>Careers</p>
+          <ul>
+            <li>About Company</li>
+            <li>Feature Course</li>
+            <li>Careers</li>
+          </ul>
         </div>
         <div class="sources-block-item">
           <h3>Help Links</h3>
-          <p>Student Support</p>
-          <p>Course Policy</p>
-          <p>Register Key</p>
+          <ul>
+            <li>Student Support</li>
+            <li>Course Policy</li>
+            <li>Register Key</li>
+          </ul>
         </div>
         <div class="sources-block-item">
           <h3>Course</h3>
-          <p>Wordpres</p>
-          <p>Photography</p>
-          <p>Learning English</p>
+          <ul>
+            <li>Wordpres</li>
+            <li>Photography</li>
+            <li>Learning English</li>
+          </ul>
         </div>
         <div class="sources-block-item">
           <h3>Social Media</h3>
@@ -588,8 +597,6 @@
           </svg>
         </div>
       </section>
-    </main>
-    <footer>
       <p>All rights Reserved</p>
       <ul>
         <li>About company</li>
