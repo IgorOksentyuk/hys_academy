@@ -5,19 +5,13 @@ body {
   font-weight: 400;
   line-height: 1.29;
 }
-body h1 {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-}
-body h2 {
+body .block-title {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.14;
   color: #000;
 }
-body h3 {
+body .block-subtitle {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.23;
@@ -33,6 +27,13 @@ body .button {
   border-radius: 22px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+}
+body .active:hover {
+  background-color: #3d7fff;
+}
+body .active:focus {
+  background-color: #175ee9;
 }
 body .block-description {
   font-size: 12px;
@@ -40,43 +41,94 @@ body .block-description {
   line-height: 0.82;
   color: #1b63f0;
 }
-body a {
-  text-decoration: none;
-}
-body header {
+body .header {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.09;
 }
-body header li {
+body .header .union-svg {
+  cursor: pointer;
+}
+body .header li {
   list-style-type: none;
+}
+body .header li a {
+  text-decoration: none;
+}
+body .education-block____info-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
 }
 body .education-block____started-btn {
   color: #000;
   background-color: #97f5cd;
 }
+body .education-block____started-btn:hover {
+  background-color: #c0ffe4;
+}
+body .education-block____started-btn:focus {
+  background-color: #83ebbf;
+}
 body .courses-block {
   color: #fff;
+}
+body .courses-block____circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px #e2edfb;
+  cursor: pointer;
+}
+body .courses-block____circle:hover {
+  background-color: #64be97;
+}
+body .courses-block____circle:active {
+  background-color: #55b089;
 }
 body .courses-block h3 {
   color: #fff;
 }
-body .courses-block___item-title {
+body .courses-block____item-title {
   font-size: 12px;
   font-weight: 500;
   line-height: 0.82;
 }
-body .courses-block___item-price {
+body .courses-block____item-price {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.09;
 }
-body .courses-block___item-discount {
+body .courses-block____item-discount {
   font-size: 12px;
   line-height: 1.09;
 }
-body .courses-block___item-rating {
+body .courses-block____item-rating {
   font-size: 12px;
+}
+body .courses-block____item:hover {
+  box-shadow: 0 6px 20px hsla(220deg, 88%, 52%, 0.4);
+}
+body .tour-block____play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #64be97;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 16px hsla(133deg, 55%, 54%, 0.56);
+}
+body .tour-block____play-btn:hover {
+  border: none;
+}
+body .tour-block____play-btn:active {
+  background-color: #55b089;
 }
 body .tour-block____right-btn {
   padding: 12px 20px;
@@ -141,6 +193,14 @@ body .started-block____left-apply-btn {
 body .started-block____left-request-btn {
   padding: 12px 20px;
   background: #45529c;
+  border: 1px solid #fff;
+}
+body .started-block____left-request-btn:hover {
+  background-color: hsla(0deg, 0%, 100%, 0.15);
+}
+body .started-block____left-request-btn:focus {
+  background-color: hsla(0deg, 0%, 100%, 0.15);
+  border: 2px solid #fff;
 }
 body .started-block____right-title h2 {
   color: #fff;
@@ -159,16 +219,49 @@ body .blog-block p {
 body .blog-block p:first-of-type {
   color: #5d74e4;
 }
-body .blog-block____box-numbers h3 {
+body .blog-block____box-numbers .block-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
   color: #5d74e4;
+  cursor: pointer;
+}
+body .blog-block____box-numbers .block-subtitle:hover {
+  box-shadow: 0 4px 16px #e2edfb;
+}
+body .blog-block____box-numbers .block-subtitle:active {
+  box-shadow: none;
+  border: 1px solid #64be97;
 }
 body .form input {
   font-weight: 500;
   line-height: 0.94;
+  width: 420px;
+  padding: 14px 12px;
+  background-color: #f3f6fc;
+  border: none;
+  border-radius: 22px;
+}
+body .form input:focus {
+  outline: 2px solid #1b63f0;
+  color: #000;
+}
+body .form input:-moz-placeholder-shown {
+  border: 1px solid #f15b5b;
+}
+body .form input:-ms-input-placeholder {
+  border: 1px solid #f15b5b;
+}
+body .form input:placeholder-shown {
+  border: 1px solid #f15b5b;
 }
 body .form____btn {
   padding: 14px 44px;
   background-color: #64be97;
+  box-shadow: 0 4px 16px hsla(133deg, 54%, 54%, 0.58);
 }
 body .sources-block h3 {
   font-weight: 700;
