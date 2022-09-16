@@ -49,6 +49,9 @@ body .header {
 body .header .union-svg {
   cursor: pointer;
 }
+body .header .union-svg:hover {
+  --icon-color: #000;
+}
 body .header li {
   list-style-type: none;
 }
