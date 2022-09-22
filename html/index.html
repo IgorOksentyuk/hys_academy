@@ -15,10 +15,28 @@
     <link rel="stylesheet" href="/css/variables.css" />
   </head>
   <body>
-    <img src="/images/background_1.png" alt="background_1" width="778" />
-    <img src="/images/background_2.png" alt="background_2" width="740" />
-
+    <div class="background">
+      <div class="background___container">
+        <img
+          class="background____container-bg-one"
+          width="375"
+          height="314"
+          src="/images/background_1.png"
+          alt="/background_1"
+        />
+        <img
+          class="background____container-bg-two"
+          width="356.68"
+          height="314"
+          src="/images/background_2.png"
+          alt="background_2"
+        />
+      </div>
+    </div>
     <header class="header">
+      <svg class="burger-menu" width="20" height="14">
+        <use xlink:href="/images/sprite.svg#burger-menu"></use>
+      </svg>
       <svg class="union-svg --icon-color" width="53.12px" height="24px" fill="#1B63F0">
         <use xlink:href="/images/sprite.svg#union-icon"></use>
       </svg>
@@ -36,6 +54,10 @@
 
     <main>
       <section class="education-block">
+        <svg class="illustration-icon" width="375" height="377">
+          <use xlink:href="/images/sprite.svg#illustration"></use>
+        </svg>
+
         <div class="education-block____info">
           <h1 class="education-block____info-title">Education is the most powerfull weapon</h1>
           <p>
@@ -45,8 +67,6 @@
           <button class="button active">Read More</button>
           <a class="education-block____started-btn button" href="#form">Get started</a>
         </div>
-
-        <img src="/images/education-block/illustration.png" alt="img_writing" width="403" />
 
         <ul>
           <li>
@@ -70,6 +90,7 @@
       <section class="shy-block" id="shy">
         <div class="shy-block____title">
           <h2 class="block-title">Shy shoose us?</h2>
+          <div class="title-underline"></div>
         </div>
         <div>
           <div class="shy-block____item">
@@ -77,30 +98,21 @@
               <use xlink:href="/images/sprite.svg#certificate"></use>
             </svg>
             <h3 class="block-subtitle">Certificate</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.A bank is a
-              financial institution accepts deposits from public and creates credit.
-            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
           </div>
           <div class="shy-block____item">
             <svg width="40" height="54">
               <use xlink:href="/images/sprite.svg#compass"></use>
             </svg>
             <h3 class="block-subtitle">Life Programs</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed institution accepts
-              deposits from public
-            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
           </div>
           <div class="shy-block____item">
             <svg width="42.67" height="52.04">
               <use xlink:href="/images/sprite.svg#telescope"></use>
             </svg>
             <h3 class="block-subtitle">Affordability</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. A bank is a financial
-              institution accepts deposits from public and creates credit.
-            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
           </div>
           <div class="shy-block____item">
             <svg width="37.8" height="53.03">
@@ -121,7 +133,7 @@
         </div>
 
         <div class="courses-block____box">
-          <div class="courses-block____circle">
+          <div class="courses-block____box circle">
             <svg
               class="arrow-icon --arrow-hover"
               width="9"
@@ -132,30 +144,34 @@
               <use xlink:href="/images/sprite.svg#arrow-left"></use>
             </svg>
           </div>
-          <div class="courses-block____item">
-            <img src="/images/courses-block/man_1.png" alt="man_1" />
-            <img width="270" height="364" src="/images/courses-block/desing.png" alt="desing" />
-            <p class="courses-block____item-title">DESIGN</p>
+          <div class="courses-block____box-item">
+            <img
+              class="courses-block____box-item-man"
+              src="/images/courses-block/man_1.png"
+              alt="man_1"
+            />
+            <div class="courses-block____box-item-bg"></div>
+            <p class="courses-block____box-item-title">DESIGN</p>
             <h3 class="block-subtitle">Learn Photoshop title</h3>
-            <span class="courses-block____item-underline"></span>
-            <p class="courses-block____item-price">$260</p>
-            <s class="courses-block____item-discount">$360</s>
-            <div>
+            <span class="courses-block____box-item-underline"></span>
+            <p class="courses-block____box-item-price">$260</p>
+            <s class="courses-block____box-item-discount">$360</s>
+            <div class="courses-block____box-item-rating">
               <img src="/images/courses-block/star-yellow.png" alt="star" />
               <img src="/images/courses-block/star-yellow.png" alt="star" />
               <img src="/images/courses-block/star-yellow.png" alt="star" />
               <img src="/images/courses-block/star-yellow.png" alt="star" />
               <img src="/images/courses-block/star-white.png" alt="star" />
             </div>
-            <p>(4)</p>
+            <p class="courses-block____box-item-mark">(4)</p>
           </div>
-          <div class="courses-block____item">
+          <div class="courses-block____box-item-marketing">
             <img src="/images/courses-block/man_2.png" alt="man_2" />
             <img width="270" height="364" src="/images/courses-block/marketing.png" alt="desing" />
-            <p class="courses-block____item-title">Marketing</p>
+            <p class="courses-block____box-item-title">Marketing</p>
             <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
-            <span class="courses-block____item-underline"></span>
-            <p class="courses-block____item-price">$260</p>
+            <span class="courses-block____box-item-underline"></span>
+            <p class="courses-block____box-item-price">$260</p>
             <s>$360</s>
             <div>
               <img src="/images/courses-block/star-yellow.png" alt="star" />
@@ -166,7 +182,7 @@
             </div>
             <p>(4)</p>
           </div>
-          <div class="courses-block____item">
+          <div class="courses-block____box-item-web">
             <img src="/images/courses-block/man_3.png" alt="man_3" />
             <img
               width="270"
@@ -174,10 +190,10 @@
               src="/images/courses-block/web-design.png"
               alt="web-design"
             />
-            <p class="courses-block____item-title">Web design</p>
+            <p class="courses-block____box-item-title">Web design</p>
             <h3 class="block-subtitle">Learn Photoshop</h3>
-            <span class="courses-block____item-underline"></span>
-            <p class="courses-block____item-price">$260</p>
+            <span class="courses-block____box-item-underline"></span>
+            <p class="courses-block____box-item-price">$260</p>
             <s>$360</s>
             <div>
               <img src="/images/courses-block/star-yellow.png" alt="star" />
@@ -188,7 +204,7 @@
             </div>
             <p>(4)</p>
           </div>
-          <div class="courses-block____circle">
+          <div class="courses-block____box circle">
             <svg
               class="arrow-icon --arrow-hover"
               width="9"
@@ -205,7 +221,7 @@
       <section class="tour-block" id="tour">
         <div class="tour-block____left">
           <img src="/images/tour-block/rectangle.png" alt="rectangle" />
-          <div class="tour-block____play-btn">
+          <div class="tour-block____left-play-btn">
             <svg width="14" height="18">
               <use xlink:href="/images/sprite.svg#play"></use>
             </svg>
@@ -213,9 +229,10 @@
         </div>
 
         <div class="tour-block____right">
+          <p class="block-description">UNIVERSOTY DESCRIPTION</p>
           <div class="tour-block____right-title">
-            <p class="block-description">UNIVERSOTY DESCRIPTION</p>
             <h2 class="block-title">Take a tour</h2>
+            <div class="title-underline"></div>
           </div>
 
           <div class="tour-block____right-info">
@@ -250,6 +267,7 @@
         <div class="business-block____left">
           <div class="business-block____left-title">
             <h2 class="block-title">Why shoose us?</h2>
+            <div class="title-underline"></div>
           </div>
 
           <div class="business-block____left-item">
@@ -275,6 +293,7 @@
               <p>United States</p>
             </div>
           </div>
+          <div class="business-block____left-underline"></div>
 
           <div class="business-block____left-item">
             <h3 class="block-subtitle">International Conference on Bussiness</h3>
@@ -300,29 +319,7 @@
             </div>
           </div>
 
-          <div class="business-block____left-item">
-            <h3 class="block-subtitle">International Conference on Bussiness</h3>
-            <div class="business-block____left-item-date">
-              <svg width="20" height="20">
-                <use xlink:href="/images/sprite.svg#calendar"></use>
-              </svg>
-              <p>July 8, 2018</p>
-            </div>
-
-            <div class="business-block____left-item-time">
-              <svg width="20" height="20">
-                <use xlink:href="/images/sprite.svg#clock"></use>
-              </svg>
-              <p>5:00pm - 7:00pm</p>
-            </div>
-
-            <div class="business-block____left-item-location">
-              <svg width="20" height="20">
-                <use xlink:href="/images/sprite.svg#location"></use>
-              </svg>
-              <p>United States</p>
-            </div>
-          </div>
+          <div class="business-block____left-underline"></div>
 
           <div class="business-block____left-item">
             <h3 class="block-subtitle">International Conference on Bussiness</h3>
@@ -347,126 +344,194 @@
               <p>United States</p>
             </div>
           </div>
+
+          <div class="business-block____left-underline"></div>
+
+          <div class="business-block____left-item">
+            <h3 class="block-subtitle">International Conference on Bussiness</h3>
+            <div class="business-block____left-item-date">
+              <svg width="20" height="20">
+                <use xlink:href="/images/sprite.svg#calendar"></use>
+              </svg>
+              <p>July 8, 2018</p>
+            </div>
+
+            <div class="business-block____left-item-time">
+              <svg width="20" height="20">
+                <use xlink:href="/images/sprite.svg#clock"></use>
+              </svg>
+              <p>5:00pm - 7:00pm</p>
+            </div>
+
+            <div class="business-block____left-item-location">
+              <svg width="20" height="20">
+                <use xlink:href="/images/sprite.svg#location"></use>
+              </svg>
+              <p>United States</p>
+            </div>
+          </div>
+
+          <div class="business-block____left-underline"></div>
         </div>
 
         <div class="business-block____right">
           <p class="business-block____right-title">FEATURED</p>
           <div class="business-block____right-remaining">
             <span class="business-block____right-remaining-days">$213</span>
-            <span>Days</span>
+            <p>Days</p>
             <span class="business-block____right-remaining-hours">23</span>
-            <span>Hours</span>
+            <p>Hours</p>
             <span class="business-block____right-remaining-min">59</span>
-            <span>Min</span>
+            <p>Min</p>
           </div>
-          <img width="328" height="380" src="/images/courses-block/desing.png" alt="desing" />
           <div class="business-block____right-panel">
-            <h3 class="block-subtitle">International Conference...</h3>
-            <div class="business-block____right-panel-date">
-              <svg width="20" height="20">
-                <use xlink:href="/images/sprite.svg#calendar-white"></use>
-              </svg>
-              <p>July 8, 2018</p>
-            </div>
+            <div class="business-block____right-panel-bg">
+              <h3 class="block-subtitle">International Conference...</h3>
+              <div class="business-block____right-panel-bg-date">
+                <svg width="20" height="20">
+                  <use xlink:href="/images/sprite.svg#calendar-white"></use>
+                </svg>
+                <p>July 8, 2018</p>
+              </div>
 
-            <div class="business-block____right-panel-time">
-              <svg width="20" height="20">
-                <use xlink:href="/images/sprite.svg#clock-white"></use>
-              </svg>
-              <p>5:00pm - 7:00pm</p>
-            </div>
+              <div class="business-block____right-panel-bg-time">
+                <svg width="20" height="20">
+                  <use xlink:href="/images/sprite.svg#clock-white"></use>
+                </svg>
+                <p>5pm - 7pm</p>
+              </div>
 
-            <div class="business-block____right-panel-location">
-              <svg width="20" height="20">
-                <use xlink:href="/images/sprite.svg#location-white"></use>
-              </svg>
-              <p>United States</p>
+              <div class="business-block____right-panel-bg-location">
+                <svg width="20" height="20">
+                  <use xlink:href="/images/sprite.svg#location-white"></use>
+                </svg>
+                <p>United States</p>
+              </div>
             </div>
-
-            <button class="button business-block____right-btn active">Become a Sponsor</button>
           </div>
+          <button class="button business-block____right-btn active">Become a Sponsor</button>
         </div>
       </section>
 
       <section class="prefer-block" id="prefer">
-        <h2 class="block-title">Which one do you prefer?</h2>
+        <div class="block-title">
+          Which one do you prefer?
+          <div class="title-underline"></div>
+        </div>
         <p>
           Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
           quasiarchitecto beatae vitae dicta sunt explicabo.
         </p>
 
-        <div class="courses-block____circle">
-          <svg class="arrow-icon --arrow-hover" width="9" height="14" fill="none" stroke="#64BE97">
-            <use xlink:href="/images/sprite.svg#arrow-left"></use>
-          </svg>
-        </div>
-
-        <div class="prefer-block____item">
-          <img width="197" src="/images/courses-block/desing.png" alt="desing" />
-          <h3 class="block-subtitle">Graphic Design</h3>
-        </div>
-        <div class="prefer-block____item">
-          <img width="197" src="/images/courses-block/web-design.png" alt="web-design" />
-          <h3 class="block-subtitle">Web Design</h3>
-        </div>
-        <div class="prefer-block____item">
-          <img width="197" src="/images/prefer-block/marketing.png" alt="marketing" />
-          <h3 class="block-subtitle">Marketing</h3>
-        </div>
-        <div class="prefer-block____item">
-          <img width="197" src="/images/prefer-block/education.png" alt="education" />
-          <h3 class="block-subtitle">Education</h3>
-        </div>
-        <div class="courses-block____circle">
-          <svg class="arrow-icon --arrow-hover" width="9" height="14" fill="none" stroke="#64BE97">
-            <use xlink:href="/images/sprite.svg#arrow-right"></use>
-          </svg>
+        <div class="prefer-block____container">
+          <div class="circle">
+            <svg
+              class="arrow-icon --arrow-hover"
+              width="9"
+              height="14"
+              fill="none"
+              stroke="#64BE97"
+            >
+              <use xlink:href="/images/sprite.svg#arrow-left"></use>
+            </svg>
+          </div>
+          <div class="prefer-block____container-item">
+            <div class="prefer-block____container-item-bg"></div>
+            <img width="197" src="/images/courses-block/desing.png" alt="desing" />
+            <h3 class="block-subtitle">Graphic Design</h3>
+          </div>
+          <div class="prefer-block____item web">
+            <img width="197" src="/images/courses-block/web-design.png" alt="web-design" />
+            <h3 class="block-subtitle">Web Design</h3>
+          </div>
+          <div class="prefer-block____item marketing">
+            <img width="197" src="/images/prefer-block/marketing.png" alt="marketing" />
+            <h3 class="block-subtitle">Marketing</h3>
+          </div>
+          <div class="prefer-block____item education">
+            <img width="197" src="/images/prefer-block/education.png" alt="education" />
+            <h3 class="block-subtitle">Education</h3>
+          </div>
+          <div class="circle">
+            <svg
+              class="arrow-icon --arrow-hover"
+              width="9"
+              height="14"
+              fill="none"
+              stroke="#64BE97"
+            >
+              <use xlink:href="/images/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
         </div>
       </section>
 
       <section class="customers-block">
-        <img width="796" src="/images/customers-block/background_1.png" alt="background_1" />
-        <img width="515" src="/images/customers-block/background_2.png" alt="background_2" />
         <div class="customers-block____images">
           <div class="customers-block____images-square"></div>
           <img
-            width="344"
+            class="customers-block____images-img"
+            width="270.03"
+            height="270.03"
             src="/images/customers-block/customers-photo.png"
             alt="customers-photo"
           />
         </div>
 
-        <div class="customers-block____info">
-          <h2 class="block-title">Our great customers</h2>
-          <img src="/images/customers-block/quotes.png" alt="quotes" />
-          <div>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-            </p>
-            <p>
-              Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-              architecto beatae vitae dicta sunt explicabo.
-            </p>
-            <p>Stephanie Magion</p>
+        <div class="customers-block____container">
+          <div class="customers-block____container-background">
+            <img
+              class="customers-block____container-background-one"
+              width="796"
+              src="/images/customers-block/background_1.png"
+              alt="background_1"
+            />
+            <img
+              class="customers-block____container-background-two"
+              width="515"
+              src="/images/customers-block/background_2.png"
+              alt="background_2"
+            />
           </div>
 
-          <div class="customers-block____info-circles">
-            <div class="customers-block____info-circles-circle"></div>
-            <div class="customers-block____info-circles-circle"></div>
-            <div class="customers-block____info-circles-circle"></div>
-            <div class="customers-block____info-circles-circle"></div>
-            <div class="customers-block____info-circles-circle"></div>
+          <div class="customers-block____container-info">
+            <div class="customers-block____container-info-title">
+              <h2 class="block-title">Our great customers</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <img src="/images/customers-block/quotes.png" alt="quotes" />
+            <div>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque
+              </p>
+              <p>
+                Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo.
+              </p>
+              <p>Stephanie Magion</p>
+            </div>
+
+            <div class="customers-block____container-info-circles">
+              <div class="customers-block____container-info-circles-circle"></div>
+              <div class="customers-block____container-info-circles-circle"></div>
+              <div class="customers-block____container-info-circles-circle blue"></div>
+              <div class="customers-block____container-info-circles-circle"></div>
+              <div class="customers-block____container-info-circles-circle"></div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="started-block">
-        <img
+        <!-- <img
           src="/images/started-block/started-background.png"
           alt="started-background"
           width="1440"
           height="406"
-        />
+        /> -->
+        <div class="started-block____bg"></div>
         <div class="started-block____left">
           <p class="started-block____left-title">IT’S FAST, FREE AND VERY EASY!</p>
           <h2 class="block-title">Ready to get started?</h2>
@@ -482,50 +547,44 @@
           <a class="started-block____left-apply-btn button" href="#form">Apply Now</a>
           <button class="started-block____left-request-btn button">Request Service</button>
         </div>
-
         <div class="started-block____right">
           <div class="started-block____right-title">
-            <svg width="24" height="24">
+            <svg class="chain-icon" width="24" height="24">
               <use xlink:href="/images/sprite.svg#chain"></use>
             </svg>
             <h2 class="block-title">Quick Link</h2>
           </div>
-
           <div class="started-block____right-box">
-            <div class="started-block____right-item">
+            <div class="started-block____right-box-item">
               <svg width="24" height="24">
                 <use xlink:href="/images/sprite.svg#pen"></use>
               </svg>
               <h4>Tution and Fees</h4>
             </div>
-            <span>______</span>
-
-            <div class="started-block____right-item">
+            <div class="started-block____right-underline"></div>
+            <div class="started-block____right-box-item">
               <svg width="24" height="24">
                 <use xlink:href="/images/sprite.svg#case"></use>
               </svg>
               <h4>Review & Rating</h4>
             </div>
+            <div class="started-block____right-underline"></div>
 
-            <span>______</span>
-
-            <div class="started-block____right-item">
+            <div class="started-block____right-box-item">
               <svg width="24" height="24">
                 <use xlink:href="/images/sprite.svg#book"></use>
               </svg>
               <h4>Universoty Facilities</h4>
             </div>
+            <div class="started-block____right-underline"></div>
 
-            <span>______</span>
-
-            <div class="started-block____right-item">
+            <div class="started-block____right-box-item">
               <svg width="18" height="18">
                 <use xlink:href="/images/sprite.svg#message"></use>
               </svg>
               <h4>Community Q&A</h4>
             </div>
-
-            <span>______</span>
+            <div class="started-block____right-underline"></div>
           </div>
         </div>
       </section>
@@ -533,22 +592,40 @@
       <section class="blog-block">
         <div class="blog-block____title">
           <h2 class="block-title">Latest Blog</h2>
+          <div class="title-underline"></div>
         </div>
         <div class="blog-block____box">
-          <div class="blog-block____box-left">
-            <div class="blog-block____box-background"></div>
+          <div class="blog-block____box-item">
+            <div class="blog-block____box-item-background"></div>
             <p>DESIGN</p>
-            <img width="328" src="/images/blog-block/card-left.png" alt="card-left" />
-            <img src="/images/courses-block/man_1.png" alt="man_1" />
+            <img
+              class="blog-block____box-item-img"
+              width="328"
+              src="/images/blog-block/card-left.png"
+              alt="card-left"
+            />
+            <img
+              class="blog-block____box-item-man"
+              src="/images/courses-block/man_1.png"
+              alt="man_1"
+            />
             <h3 class="block-subtitle">International Conference on Bussiness</h3>
             <p>Read Now</p>
           </div>
-
-          <div class="blog-block____box-right">
-            <div class="blog-block____box-background"></div>
+          <div class="blog-block____box-item">
+            <div class="blog-block____box-item-background"></div>
             <p>DESIGN</p>
-            <img width="328" src="/images/blog-block/card-right.png" alt="card-right" />
-            <img src="/images/courses-block/man_2.png" alt="man_2" />
+            <img
+              class="blog-block____box-item-img"
+              width="328"
+              src="/images/blog-block/card-left.png"
+              alt="card-left"
+            />
+            <img
+              class="blog-block____box-item-man"
+              src="/images/courses-block/man_1.png"
+              alt="man_1"
+            />
             <h3 class="block-subtitle">International Conference on Bussiness</h3>
             <p>Read Now</p>
           </div>
@@ -573,10 +650,10 @@
 
     <footer>
       <section class="sources-block">
-        <svg width="53.12px" height="24px">
+        <svg class="union-svg --icon-color" width="53.12px" height="24px" fill="#1B63F0">
           <use xlink:href="/images/sprite.svg#union-icon"></use>
         </svg>
-        <div class="sources-block-item">
+        <div class="sources-block____item">
           <h3 class="block-subtitle">Company</h3>
           <ul>
             <li>About Company</li>
@@ -584,7 +661,7 @@
             <li>Careers</li>
           </ul>
         </div>
-        <div class="sources-block-item">
+        <div class="sources-block____item">
           <h3 class="block-subtitle">Help Links</h3>
           <ul>
             <li>Student Support</li>
@@ -592,7 +669,7 @@
             <li>Register Key</li>
           </ul>
         </div>
-        <div class="sources-block-item">
+        <div class="sources-block____item">
           <h3 class="block-subtitle">Course</h3>
           <ul>
             <li>Wordpres</li>
@@ -600,21 +677,25 @@
             <li>Learning English</li>
           </ul>
         </div>
-        <div class="sources-block-item">
+        <div class="sources-block____item">
           <h3 class="block-subtitle">Social Media</h3>
-          <svg width="13" height="22">
-            <use xlink:href="/images/sprite.svg#facebook"></use>
-          </svg>
-          <svg width="24" height="24">
-            <use xlink:href="/images/sprite.svg#instagram"></use>
-          </svg>
-          <svg width="24" height="24">
-            <use xlink:href="/images/sprite.svg#twitter"></use>
-          </svg>
-          <svg width="24" height="24">
-            <use xlink:href="/images/sprite.svg#youtube"></use>
-          </svg>
+          <div class="sources-block____item-icons">
+            <svg width="13" height="22">
+              <use xlink:href="/images/sprite.svg#facebook"></use>
+            </svg>
+            <svg width="24" height="24">
+              <use xlink:href="/images/sprite.svg#instagram"></use>
+            </svg>
+            <svg width="24" height="24">
+              <use xlink:href="/images/sprite.svg#twitter"></use>
+            </svg>
+            <svg width="24" height="24">
+              <use xlink:href="/images/sprite.svg#youtube"></use>
+            </svg>
+          </div>
         </div>
+
+        <div class="sources-block____underline"></div>
       </section>
 
       <section class="footer-text">
