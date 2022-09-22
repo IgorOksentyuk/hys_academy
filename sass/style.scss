@@ -1,380 +1,365 @@
-//Variables
-$mainColor: #5c5c5c;
-$blueOne: #1b63f0;
-$blueHover: #3d7fff;
-$blueFocus: #175ee9;
-$greenLight: #64be97;
-$whiteShadow: #e2edfb;
-$greenActive: #55b089;
-$whiteFeature: #f6f2e9;
-$greenBusiness: #838383;
-$blueDays: #91a3ed;
-$yellowHours: #f0c41b;
-$orangeMins: #fe5f60;
-$blueRequest: hsla(0, 0%, 100%, 0.15);
-$blueDesign: #5d74e4;
-$blueInput: #f3f6fc;
-$inputRed: #f15b5b;
-$greenSend: hsla(133, 54%, 54%, 0.58);
-
 body {
   font-family: 'Montserrat', sans-serif;
-  color: $mainColor;
+  color: var(--greyMain);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.29;
+}
 
-  .block-title {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.14;
-    color: #000;
-  }
+.block-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: #000;
+}
 
-  .block-subtitle {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.23;
-    color: #000;
-  }
+.block-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.23;
+  color: #000;
+}
 
-  .button {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.09;
-    background-color: $blueOne;
-    padding: 12px 24px;
-    border-radius: 22px;
-    border: none;
+.button {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.09;
+  background-color: var(--blueOne);
+  padding: 12px 24px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.active:hover {
+  background-color: var(--blueHover);
+}
+
+.active:focus {
+  background-color: var(--blueFocus);
+}
+
+.block-description {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 0.82;
+  color: var(--blueOne);
+}
+
+.header {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.09;
+
+  .union-svg {
     cursor: pointer;
-    text-decoration: none;
   }
 
-  .active:hover {
-    background-color: $blueHover;
+  .union-svg:hover {
+    --icon-color: #000;
   }
 
-  .active:focus {
-    background-color: $blueFocus;
-  }
+  li {
+    list-style-type: none;
 
-  .block-description {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 0.82;
-    color: $blueOne;
-  }
-
-  .header {
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.09;
-
-    .union-svg {
-      cursor: pointer;
-    }
-
-    .union-svg:hover {
-      --icon-color: #000;
-    }
-
-    li {
-      list-style-type: none;
-
-      a {
-        text-decoration: none;
-      }
+    a {
+      text-decoration: none;
     }
   }
+}
 
-  .education-block {
-    &____info-title {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1;
-      color: #000;
-    }
+.education-block {
+  &____info-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+  }
 
-    &____started-btn {
-      color: #000;
-      background-color: #97f5cd;
-    }
+  &____started-btn {
+    color: #000;
+    background-color: #97f5cd;
+  }
 
-    &____started-btn:hover {
-      background-color: #c0ffe4;
-    }
+  &____started-btn:hover {
+    background-color: #c0ffe4;
+  }
 
-    &____started-btn:focus {
-      background-color: #83ebbf;
+  &____started-btn:focus {
+    background-color: #83ebbf;
+  }
+}
+
+.courses-block {
+  color: #fff;
+
+  &____circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px var(--whiteShadow);
+    cursor: pointer;
+  }
+
+  &____circle:hover {
+    background-color: var(--greenLight);
+
+    .arrow-icon {
+      --arrow-hover: #fff;
     }
   }
 
-  .courses-block {
+  &____circle:active {
+    background-color: var(--greenActive);
+  }
+
+  h3 {
     color: #fff;
-
-    &____circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 20px;
-      box-shadow: 0 4px 16px $whiteShadow;
-      cursor: pointer;
-    }
-
-    &____circle:hover {
-      background-color: $greenLight;
-    }
-
-    &____circle:active {
-      background-color: $greenActive;
-    }
-
-    h3 {
-      color: #fff;
-    }
-
-    &____item {
-      &-title {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 0.82;
-      }
-
-      &-price {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.09;
-      }
-
-      &-discount {
-        font-size: 12px;
-        line-height: 1.09;
-      }
-
-      &-rating {
-        font-size: 12px;
-      }
-    }
-
-    &____item:hover {
-      box-shadow: 0 6px 20px hsla(220, 88%, 52%, 0.4);
-    }
   }
 
-  .tour-block {
-    &____play-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background-color: $greenLight;
-      border: 2px solid #fff;
-      border-radius: 100%;
-      box-shadow: 0 4px 16px hsla(133, 55%, 54%, 0.56);
-    }
-
-    &____play-btn:hover {
-      border: none;
-    }
-
-    &____play-btn:active {
-      background-color: $greenActive;
-    }
-
-    &____right {
-      &-btn {
-        padding: 12px 20px;
-      }
-    }
-  }
-
-  .business-block {
-    color: $greenBusiness;
-
-    &____right {
-      &-title {
-        font-size: 60px;
-        font-weight: 700;
-        line-height: 1;
-        color: $whiteFeature;
-      }
-
-      &-remaining-days {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.09;
-        color: $blueDays;
-      }
-
-      &-remaining-hours {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.09;
-        color: $yellowHours;
-      }
-
-      &-remaining-min {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.09;
-        color: $orangeMins;
-      }
-
-      &-panel {
-        h3 {
-          color: #fff;
-        }
-      }
-
-      &-btn {
-        padding: 12px 20px;
-      }
-    }
-  }
-
-  .prefer-block {
-    h3 {
-      color: #fff;
-    }
-  }
-
-  .customers-block {
-    p:last-of-type {
+  &____item {
+    &-title {
       font-size: 12px;
+      font-weight: 500;
+      line-height: 0.82;
+    }
+
+    &-price {
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.09;
-      color: #000;
+    }
+
+    &-discount {
+      font-size: 12px;
+      line-height: 1.09;
+    }
+
+    &-rating {
+      font-size: 12px;
     }
   }
 
-  .started-block {
-    color: #fff;
+  &____item:hover {
+    box-shadow: 0 6px 20px hsla(220, 88%, 52%, 0.4);
+  }
+}
 
-    &____left {
-      h2 {
-        color: $greenLight;
-      }
+.tour-block {
+  &____play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--greenLight);
+    border: 2px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 4px 16px hsla(133, 55%, 54%, 0.56);
+  }
 
-      &-title {
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1.09;
-      }
+  &____play-btn:hover {
+    border: none;
+  }
 
-      &-apply-btn {
-        padding: 12px 20px;
-        background-color: $greenLight;
-      }
+  &____play-btn:active {
+    background-color: var(--greenActive);
+  }
 
-      &-request-btn {
-        padding: 12px 20px;
-        background: #45529c; // transparent
-        border: 1px solid #fff;
-      }
+  &____right {
+    &-btn {
+      padding: 12px 20px;
+    }
+  }
+}
 
-      &-request-btn:hover {
-        background-color: $blueRequest;
-      }
+.business-block {
+  color: var(--greenBusiness);
 
-      &-request-btn:focus {
-        background-color: $blueRequest;
-        border: 2px solid #fff;
-      }
+  &____right {
+    &-title {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--whiteFeature);
     }
 
-    &____right-title {
-      h2 {
+    &-remaining-days {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.09;
+      color: var(--blueDays);
+    }
+
+    &-remaining-hours {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.09;
+      color: var(--yellowHours);
+    }
+
+    &-remaining-min {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.09;
+      color: var(--orangeMins);
+    }
+
+    &-panel {
+      h3 {
         color: #fff;
       }
     }
 
-    h4 {
-      font-weight: 500;
+    &-btn {
+      padding: 12px 20px;
     }
   }
+}
 
-  .blog-block {
+.prefer-block {
+  h3 {
+    color: #fff;
+  }
+}
+
+.customers-block {
+  p:last-of-type {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.09;
     color: #000;
+  }
+}
 
-    p {
+.started-block {
+  color: #fff;
+
+  &____left {
+    h2 {
+      color: var(--greenLight);
+    }
+
+    &-title {
       font-size: 12px;
       font-weight: 700;
       line-height: 1.09;
     }
 
-    p:first-of-type {
-      color: $blueDesign;
+    &-apply-btn {
+      padding: 12px 20px;
+      background-color: var(--greenLight);
     }
 
-    &____box-numbers {
-      .block-subtitle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        color: $blueDesign;
-        cursor: pointer;
-      }
+    &-request-btn {
+      padding: 12px 20px;
+      background: #45529c; // transparent
+      border: 1px solid #fff;
+    }
 
-      .block-subtitle:hover {
-        box-shadow: 0 4px 16px $whiteShadow;
-      }
+    &-request-btn:hover {
+      background-color: var(--blueRequest);
+    }
 
-      .block-subtitle:active {
-        box-shadow: none;
-        border: 1px solid $greenLight;
-      }
+    &-request-btn:focus {
+      background-color: var(--blueRequest);
+      border: 2px solid #fff;
     }
   }
 
-  .form {
-    input {
-      font-weight: 500;
-      line-height: 0.94;
-      width: 420px;
-      padding: 14px 12px;
-      background-color: $blueInput;
-      border: none;
-      border-radius: 22px;
-    }
-
-    input:focus {
-      outline: 2px solid $blueOne;
-      color: #000;
-    }
-
-    input:placeholder-shown {
-      border: 1px solid $inputRed;
-    }
-
-    &____btn {
-      padding: 14px 44px;
-      background-color: $greenLight;
-      box-shadow: 0 4px 16px $greenSend;
+  &____right-title {
+    h2 {
+      color: #fff;
     }
   }
 
-  .sources-block {
-    h3 {
-      font-weight: 700;
-    }
+  h4 {
+    font-weight: 500;
+  }
+}
+
+.blog-block {
+  color: #000;
+
+  p {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.09;
   }
 
-  footer {
-    li {
-      list-style-type: none;
+  p:first-of-type {
+    color: var(--blueDesign);
+  }
+
+  &____box-numbers {
+    .block-subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      color: var(--blueDesign);
+      cursor: pointer;
     }
 
-    .footer-text {
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1.09;
+    .block-subtitle:hover {
+      box-shadow: 0 4px 16px var(--whiteShadow);
     }
+
+    .block-subtitle:active {
+      box-shadow: none;
+      border: 1px solid var(--greenLight);
+    }
+  }
+}
+
+.form {
+  input {
+    font-weight: 500;
+    line-height: 0.94;
+    width: 420px;
+    padding: 14px 12px;
+    background-color: var(--blueInput);
+    border: none;
+    border-radius: 22px;
+  }
+
+  input:focus {
+    outline: 2px solid var(--blueOne);
+    color: #000;
+  }
+
+  input:placeholder-shown {
+    border: 1px solid var(--inputRed);
+  }
+
+  &____btn {
+    padding: 14px 44px;
+    background-color: var(--greenLight);
+    box-shadow: 0 4px 16px var(--greenSend);
+  }
+}
+
+.sources-block {
+  h3 {
+    font-weight: 700;
+  }
+}
+
+footer {
+  li {
+    list-style-type: none;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.09;
   }
 }

@@ -38,13 +38,13 @@
 
     <symbol id="arrow-left" viewBox="0 0 9 14">
         <g>
-            <path d="M7.5 13L1.5 7L7.5 1" stroke="#64BE97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.5 13L1.5 7L7.5 1"  stroke="var(--arrow-hover)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </g>
     </symbol>
 
     <symbol id="arrow-right" viewBox="0 0 9 14">
         <g>
-            <path d="M1.5 13L7.5 7L1.5 1" stroke="#64BE97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.5 13L7.5 7L1.5 1" stroke="var(--arrow-hover)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
     </symbol> 
      
