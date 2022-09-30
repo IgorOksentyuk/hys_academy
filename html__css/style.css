@@ -137,9 +137,14 @@ body {
 }
 .header .navigation ul li a {
   text-decoration: none;
+  color: #fff;
+}
+.header .navigation ul li a:hover {
+  color: var(--blueOne);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header .button {
-  margin: 24px 32px 0 0;
+  margin: 24px 32px 0;
 }
 @media screen and (min-width: 768px) {
   .header .burger-icon {
@@ -148,18 +153,17 @@ body {
   .header .union-svg {
     margin-left: 50px;
   }
+  .header .navigation {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
   .header .navigation ul {
     display: flex;
     margin-top: 36px;
-    margin-left: 160px;
   }
   .header .navigation ul li {
     margin-left: 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .header ul {
-    margin-left: 400px;
   }
 }
 
@@ -1306,6 +1310,11 @@ footer .footer-text ul li {
 }
 footer .footer-text ul li a {
   text-decoration: none;
+  color: var(--greyMain);
+}
+footer .footer-text ul li a:hover {
+  color: var(--blueOne);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   footer .footer-text {
