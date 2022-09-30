@@ -9,7 +9,7 @@ body {
   line-height: 1.29;
   overflow-x: hidden;
   position: relative;
-  background-image: url(/html__css/images/background.svg);
+  background-image: url('/html__css/images/background.svg');
   background-repeat: no-repeat;
   background-position-x: right;
 }
@@ -52,10 +52,12 @@ body {
 
 .active:hover {
   background-color: var(--blueHover);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active:focus {
   background-color: var(--blueFocus);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .block-description {
@@ -78,6 +80,7 @@ body {
 
 .circle:hover {
   background-color: var(--greenLight);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   .arrow-icon {
     --arrow-hover: #fff;
@@ -86,6 +89,7 @@ body {
 
 .circle:active {
   background-color: var(--greenActive);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -93,6 +97,7 @@ body {
   flex-direction: column;
   max-width: 1024px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .container-big {
@@ -100,6 +105,7 @@ body {
   flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -112,9 +118,10 @@ body {
   &__icons {
     display: flex;
 
-    .burger-menu {
+    .burger-icon {
       cursor: pointer;
       margin: 38px 15px 0 27px;
+      --icon-color: var(--blueUnderline);
     }
 
     .union-svg {
@@ -124,27 +131,30 @@ body {
 
     .union-svg:hover {
       --icon-color: #000;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
-  ul {
-    display: none;
+  .navigation {
+    ul {
+      display: none;
+
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   .button {
     margin: 24px 32px 0 0;
   }
 
-  li {
-    list-style-type: none;
-
-    a {
-      text-decoration: none;
-    }
-  }
-
   @media screen and (min-width: 768px) {
-    .burger-menu {
+    .burger-icon {
       display: none;
     }
 
@@ -152,13 +162,15 @@ body {
       margin-left: 50px;
     }
 
-    ul {
-      display: flex;
-      margin-top: 36px;
-      margin-left: 160px;
+    .navigation {
+      ul {
+        display: flex;
+        margin-top: 36px;
+        margin-left: 160px;
 
-      li {
-        margin-left: 20px;
+        li {
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -166,6 +178,65 @@ body {
   @media screen and (min-width: 1440px) {
     ul {
       margin-left: 400px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  position: fixed;
+  z-index: 3;
+  top: -200%;
+  transition: all 0.3s ease 0s;
+
+  &__icons {
+    position: relative;
+    display: flex;
+    margin-bottom: 94px;
+
+    svg {
+      margin-top: 35px;
+      cursor: pointer;
+    }
+
+    .burger-icon {
+      --icon-color: #000;
+      margin: 38px 15px 0 27px;
+    }
+
+    .union-svg:hover {
+      --icon-color: #000;
+    }
+
+    .cross {
+      position: absolute;
+      right: 0;
+      margin-right: 30px;
+    }
+  }
+
+  ul {
+    li {
+      list-style: none;
+      position: relative;
+      margin-bottom: 65px;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.14;
+    }
+
+    li::after {
+      position: absolute;
+      content: '';
+      width: 90%;
+      top: 60px;
+      left: 0;
+      border-bottom: 1px solid var(--blueHover);
+      opacity: 0.2;
     }
   }
 }
@@ -332,98 +403,88 @@ body {
     }
 
     &-item {
+      width: 260px;
       height: 364px;
-      position: relative;
+      display: flex;
+      flex-direction: column;
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
       border-radius: 8px;
 
-      &-man {
+      &-woman {
         position: absolute;
-        left: 16px;
-        top: -22px;
+        translate: 16px -50%;
       }
 
-      &-bg {
-        width: 260px;
-        height: 364px;
-        border-radius: 8px;
+      &-top {
+        display: flex;
+        flex-direction: column;
+        margin-top: 243px;
+        padding: 0 0 16px 0;
+        border-bottom: 1px solid var(--grayCoursesUnderline);
+
+        &-title {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 0.82;
+          margin: 0 0 8px 16px;
+        }
+
+        .block-subtitle {
+          margin: 0 0 0 16px;
+        }
       }
 
-      &-title {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 0.82;
-        position: absolute;
-        top: 243px;
-        left: 16px;
-      }
+      &-bottom {
+        display: flex;
+        margin-left: 16px;
+        margin-top: 16px;
+        margin: 16px 0 0 16px;
 
-      &-underline {
-        position: absolute;
-        top: 313px;
-        text-align: start;
-        border: 1px solid #fff;
-        width: 260px;
-        opacity: 0.3;
-      }
+        &-price {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1.09;
+          margin: 0 10px 0 0;
+        }
 
-      .block-subtitle {
-        position: absolute;
-        top: 263px;
-        left: 16px;
-      }
+        &-discount {
+          font-size: 12px;
+          line-height: 1.09;
+          margin: 4px 67px 0 0;
+        }
 
-      &-price {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.09;
-        position: absolute;
-        top: 320px;
-        left: 16px;
-      }
+        &-rating {
+          font-size: 12px;
+          margin: 7px 4px 0 0;
+        }
 
-      &-discount {
-        font-size: 12px;
-        line-height: 1.09;
-        position: absolute;
-        top: 342px;
-        left: 70px;
-      }
-
-      &-rating {
-        font-size: 12px;
-        position: absolute;
-        top: 340px;
-        left: 170px;
-      }
-
-      &-mark {
-        position: absolute;
-        top: 322px;
-        left: 235px;
+        &-mark {
+          margin: 4px 0 0 0;
+        }
       }
     }
 
     &-item:hover {
       box-shadow: 0 6px 20px hsla(220, 88%, 52%, 0.4);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .design {
-      background: url(/html__css/images/courses-block/desing.png);
+      background: url('/html__css/images/courses-block/desing.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     .marketing {
       display: none;
-      background: url(/html__css/images/courses-block/marketing.png);
+      background: url('/html__css/images/courses-block/marketing.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     .web {
       display: none;
-      background: url(/html__css/images/courses-block/web-design.png);
+      background: url('/html__css/images/courses-block/web-design.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -457,7 +518,7 @@ body {
 .tour {
   display: flex;
   flex-direction: column;
-  background-image: url(/html__css/images/tour-block/background-tour.svg);
+  background-image: url('/html__css/images/tour-block/background-tour.svg');
 
   &__left {
     position: relative;
@@ -468,21 +529,23 @@ body {
       justify-content: center;
       width: 40px;
       height: 40px;
+      position: absolute;
+      top: 200px;
+      left: 170px;
       background-color: var(--greenLight);
       border: 2px solid #fff;
       border-radius: 100%;
       box-shadow: 0 4px 16px hsla(133, 55%, 54%, 0.56);
-      position: absolute;
-      top: 200px;
-      left: 170px;
     }
 
     &-play-btn:hover {
       border: none;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &-play-btn:active {
       background-color: var(--greenActive);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
@@ -584,23 +647,28 @@ body {
 .business {
   color: var(--greenBusiness);
   margin-top: 120px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
 
   &__left {
-    margin: 0 17px 0 17px;
+    margin: 0 18px 0 18px;
     background-color: var(--blueBusiness);
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .block-title {
+      display: flex;
+      align-self: start;
       margin: 0 0 32px 0;
+      padding-top: 40px;
       position: relative;
     }
 
     .block-title::after {
       left: 240px;
+      top: 60px;
     }
 
     &-item {
@@ -671,7 +739,6 @@ body {
 
   &__right {
     background-color: var(--creamFeatured);
-    margin-bottom: 100px;
     padding-top: 40px;
     text-align: center;
 
@@ -684,11 +751,22 @@ body {
     }
 
     &-remaining {
+      width: 310px;
       display: flex;
-      margin: 24px 24px;
-      justify-content: center;
-      p {
-        margin: 0 44px 0 6px;
+      justify-content: space-around;
+      margin: 0 auto;
+      margin-bottom: 40px;
+
+      &-item {
+        display: flex;
+
+        span {
+          margin-right: 6px;
+        }
+
+        p {
+          margin: 0;
+        }
       }
 
       &-days {
@@ -714,10 +792,12 @@ body {
     }
 
     &-panel {
-      position: relative;
       height: 380px;
       max-width: 310px;
-      background-image: url(/html__css/images/courses-block/desing.png);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-image: url('/html__css/images/courses-block/desing.png');
       background-size: cover;
       margin: 0 24px;
       border-radius: 8px;
@@ -726,10 +806,7 @@ body {
       &-bg {
         width: 280px;
         height: 156px;
-        position: absolute;
         background-color: hsla(0, 0%, 0%, 0.8);
-        top: 224px;
-        left: 15px;
         display: flex;
         flex-wrap: wrap;
 
@@ -769,13 +846,15 @@ body {
     }
   }
 
+  @media screen and (min-width: 570px) {
+    .block-title {
+      align-self: center;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     &__left {
       margin: 0;
-
-      .block-subtitle {
-        align-self: start;
-      }
     }
   }
 
@@ -789,6 +868,15 @@ body {
 
     &__left {
       width: 50%;
+
+      .block-title {
+        align-self: start;
+        margin-left: 140px;
+      }
+
+      &-item {
+        align-items: start;
+      }
     }
   }
 }
@@ -845,7 +933,7 @@ body {
     }
 
     .design__item {
-      background-image: url(/html__css/images/courses-block/desing.png);
+      background-image: url('/html__css/images/courses-block/desing.png');
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -871,7 +959,7 @@ body {
     .web__item {
       display: block;
       margin-left: 20px;
-      background-image: url(/html__css/images/courses-block/web-design.png);
+      background-image: url('/html__css/images/courses-block/web-design.png');
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -892,7 +980,7 @@ body {
 
       display: block;
       margin-left: 20px;
-      background-image: url(/html__css/images/prefer-block/marketing.png);
+      background-image: url('/html__css/images/prefer-block/marketing.png');
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -905,7 +993,7 @@ body {
       display: block;
       margin-right: 0;
       margin-left: 20px;
-      background-image: url(/html__css/images/prefer-block/education.png);
+      background-image: url('/html__css/images/prefer-block/education.png');
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -1033,7 +1121,7 @@ body {
   padding-bottom: 54px;
   position: relative;
   background: linear-gradient(rgba(69, 82, 156, 0.95), rgba(69, 82, 156, 0.95)),
-    url(/html__css/images/courses-block/desing.png);
+    url('/html__css/images/courses-block/desing.png');
 
   .block-title::after {
     display: none;
@@ -1071,6 +1159,7 @@ body {
 
     &-apply-btn:hover {
       background-color: var(--greenApplyHover);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &-request-btn {
@@ -1081,6 +1170,7 @@ body {
 
     &-request-btn:hover {
       background-color: var(--blueRequest);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &-request-btn:focus {
@@ -1123,6 +1213,11 @@ body {
         h4 {
           font-weight: 500;
           margin: 0 15px;
+
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
 
@@ -1261,6 +1356,7 @@ body {
 
       .block-subtitle:hover {
         box-shadow: 0 4px 16px var(--whiteShadow);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .block-subtitle:active {
@@ -1315,6 +1411,7 @@ body {
   input:focus {
     outline: 2px solid var(--blueOne);
     color: #000;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   input:invalid {
@@ -1332,6 +1429,7 @@ body {
   &__btn:hover {
     background-color: var(--greenSendHover);
     box-shadow: 0 10 16 4 var(--sendHoverShadow);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__btn:active {

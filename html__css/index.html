@@ -16,8 +16,8 @@
     <div class="container">
       <header class="header">
         <div class="header__icons">
-          <svg class="burger-menu" width="20" height="14">
-            <use xlink:href="/html__css/images/sprite.svg#burger-menu"></use>
+          <svg class="burger-icon" width="20" height="14">
+            <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
           </svg>
           <svg class="union-svg --icon-color" width="53.12" height="24" fill="#1B63F0">
             <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
@@ -35,8 +35,27 @@
       </header>
     </div>
     <main>
+      <section class="menu">
+        <div class="menu__icons">
+          <svg class="burger-icon" width="20" height="14">
+            <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
+          </svg>
+          <svg class="union-svg" width="53.12" height="24" fill="#1B63F0">
+            <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
+          </svg>
+          <svg class="cross" width="14" height="14" fill="none">
+            <use xlink:href="/html__css/images/sprite.svg#cross"></use>
+          </svg>
+        </div>
+        <ul class="menu__list">
+          <li>Categories</li>
+          <li>Course</li>
+          <li>Explore</li>
+          <li>Degrees</li>
+        </ul>
+      </section>
       <div class="container">
-        <section class="education">
+        <section class="education" id="education">
           <svg class="illustration-icon">
             <use xlink:href="/html__css/images/sprite.svg#illustration"></use>
           </svg>
@@ -47,7 +66,7 @@
               all of your needs.
             </p>
             <button class="button active">Read More</button>
-            <a class="education__info-started-btn button" href="#form">Get started</a>
+            <a class="education__info-started-btn button active" href="#form">Get started</a>
           </div>
 
           <ul>
@@ -140,68 +159,74 @@
 
             <div class="courses__box-item design">
               <img
-                class="courses__box-item-man"
-                src="/html__css/images/courses-block/man_1.png"
+                class="courses__box-item-woman"
+                src="/html__css/images/courses-block/woman-design.png"
                 alt="man_1"
               />
-              <div class="courses__box-item-bg"></div>
-              <p class="courses__box-item-title">DESIGN</p>
-              <h3 class="block-subtitle">Learn Photoshop title</h3>
-              <span class="courses__box-item-underline"></span>
-              <p class="courses__box-item-price">$260</p>
-              <s class="courses__box-item-discount">$360</s>
-              <div class="courses__box-item-rating">
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+              <div class="courses__box-item-top">
+                <p class="courses__box-item-top-title">DESIGN</p>
+                <h3 class="block-subtitle">Learn Photoshop title</h3>
               </div>
-              <p class="courses__box-item-mark">(4)</p>
+              <div class="courses__box-item-bottom">
+                <p class="courses__box-item-bottom-price">$260</p>
+                <s class="courses__box-item-bottom-discount">$360</s>
+                <div class="courses__box-item-bottom-rating">
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                </div>
+                <p class="courses__box-item-bottom-mark">(4)</p>
+              </div>
             </div>
 
             <div class="courses__box-item marketing">
               <img
-                class="courses__box-item-man"
-                src="/html__css/images/courses-block/man_2.png"
+                class="courses__box-item-woman"
+                src="/html__css/images/courses-block/woman-marketing.png"
                 alt="man_2"
               />
-              <div class="courses__box-item-bg"></div>
-              <p class="courses__box-item-title">Marketing</p>
-              <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
-              <span class="courses__box-item-underline"></span>
-              <p class="courses__box-item-price">$260</p>
-              <s class="courses__box-item-discount">$360</s>
-              <div class="courses__box-item-rating">
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-white.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-white.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+              <div class="courses__box-item-top">
+                <p class="courses__box-item-top-title">Marketing</p>
+                <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
               </div>
-              <p>(4)</p>
+              <div class="courses__box-item-bottom">
+                <p class="courses__box-item-bottom-price">$260</p>
+                <s class="courses__box-item-bottom-discount">$360</s>
+                <div class="courses__box-item-bottom-rating">
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                </div>
+                <p class="courses__box-item-bottom-mark">(4)</p>
+              </div>
             </div>
 
             <div class="courses__box-item web">
               <img
-                class="courses__box-item-man"
-                src="/html__css/images/courses-block/man_3.png"
+                class="courses__box-item-woman"
+                src="/html__css/images/courses-block/woman-web.png"
                 alt="man_3"
               />
-              <div class="courses__box-item-bg"></div>
-              <p class="courses__box-item-title">Web design</p>
-              <h3 class="block-subtitle">Learn Photoshop</h3>
-              <span class="courses__box-item-underline"></span>
-              <p class="courses__box-item-price">$260</p>
-              <s class="courses__box-item-discount">$360</s>
-              <div class="courses__box-item-rating">
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+              <div class="courses__box-item-top">
+                <p class="courses__box-item-top-title">Web design</p>
+                <h3 class="block-subtitle">Learn Photoshop</h3>
               </div>
-              <p>(4)</p>
+              <div class="courses__box-item-bottom">
+                <p class="courses__box-item-bottom-price">$260</p>
+                <s class="courses__box-item-bottom-discount">$360</s>
+                <div class="courses__box-item-bottom-rating">
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                </div>
+                <p class="courses__box-item-bottom-mark">(4)</p>
+              </div>
             </div>
             <div class="circle">
               <svg
@@ -266,10 +291,11 @@
         </section>
       </div>
 
-      <div class="container">
+      <div class="container-big">
         <section class="business" id="business">
           <div class="business__left">
             <h2 class="block-title">Why shoose us?</h2>
+
             <div class="business__left-item">
               <h3 class="block-subtitle">International Conference on Bussiness</h3>
               <div class="business__left-item-box">
@@ -378,12 +404,18 @@
           <div class="business__right">
             <p class="business__right-title">FEATURED</p>
             <div class="business__right-remaining">
-              <span class="business__right-remaining-days">$213</span>
-              <p>Days</p>
-              <span class="business__right-remaining-hours">23</span>
-              <p>Hours</p>
-              <span class="business__right-remaining-min">59</span>
-              <p>Min</p>
+              <div class="business__right-remaining-item">
+                <span class="business__right-remaining-days">$213</span>
+                <p>Days</p>
+              </div>
+              <div class="business__right-remaining-item">
+                <span class="business__right-remaining-hours">23</span>
+                <p>Hours</p>
+              </div>
+              <div class="business__right-remaining-item">
+                <span class="business__right-remaining-min">59</span>
+                <p>Min</p>
+              </div>
             </div>
             <div class="business__right-panel">
               <div class="business__right-panel-bg">
@@ -470,7 +502,7 @@
       </div>
 
       <div class="container">
-        <section class="customers">
+        <section class="customers" id="customers">
           <div class="customers__background">
             <svg width="786" height="597">
               <use xlink:href="/html__css/images/sprite.svg#customers-background"></use>
@@ -494,7 +526,7 @@
             </div>
 
             <img src="/html__css/images/customers-block/quotes.png" alt="quotes" />
-            <div>
+            <article>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                 doloremque
@@ -504,7 +536,7 @@
                 architecto beatae vitae dicta sunt explicabo.
               </p>
               <p>Stephanie Magion</p>
-            </div>
+            </article>
 
             <div class="customers__info-circles">
               <div class="customers__info-circles-circle"></div>
@@ -547,25 +579,25 @@
                 <svg width="24" height="24">
                   <use xlink:href="/html__css/images/sprite.svg#pen"></use>
                 </svg>
-                <h4>Tution and Fees</h4>
+                <h4><a href="#blog">Tution and Fees</a></h4>
               </div>
               <div class="started__right-box-item">
                 <svg width="24" height="24">
                   <use xlink:href="/html__css/images/sprite.svg#case"></use>
                 </svg>
-                <h4>Review & Rating</h4>
+                <h4><a href="#prefer">Review & Rating</a></h4>
               </div>
               <div class="started__right-box-item">
                 <svg width="24" height="24">
                   <use xlink:href="/html__css/images/sprite.svg#book"></use>
                 </svg>
-                <h4>Universoty Facilities</h4>
+                <h4><a href="#education">Universoty Facilities</a></h4>
               </div>
               <div class="started__right-box-item">
                 <svg width="18" height="18">
                   <use xlink:href="/html__css/images/sprite.svg#message"></use>
                 </svg>
-                <h4>Community Q&A</h4>
+                <h4><a href="#customers">Community Q&A</a></h4>
               </div>
             </div>
           </div>
@@ -573,7 +605,7 @@
       </div>
 
       <div class="container">
-        <section class="blog">
+        <section class="blog" id="blog">
           <div class="blog__title">
             <h2 class="block-title">Latest Blog</h2>
           </div>
@@ -589,7 +621,7 @@
               />
               <img
                 class="blog__box-item-man"
-                src="/html__css/images/courses-block/man_1.png"
+                src="/html__css/images/blog-block/man_first.png"
                 alt="man_1"
               />
               <h3 class="block-subtitle">International Conference on Bussiness</h3>
@@ -606,7 +638,7 @@
               />
               <img
                 class="blog__box-item-man"
-                src="/html__css/images/courses-block/man_1.png"
+                src="/html__css/images/blog-block/man_second.png"
                 alt="man_1"
               />
               <h3 class="block-subtitle">International Conference on Bussiness</h3>
@@ -624,9 +656,14 @@
       </div>
 
       <form action="#" class="form" id="form">
-        <input type="text" placeholder="Name Surname" />
-        <input type="number" placeholder="Phone" />
-        <input type="email" placeholder="Enter your email..." />
+        <label for="name"></label>
+        <input type="text" name="name" placeholder="Name Surname" />
+
+        <label for="phone"></label>
+        <input type="number" name="phone" placeholder="Phone" />
+
+        <label for="email"></label>
+        <input type="email" name="email" placeholder="Enter your email..." />
         <button class="button form__btn" type="submit">Send</button>
       </form>
     </main>
