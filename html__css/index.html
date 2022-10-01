@@ -16,7 +16,7 @@
     <div class="container">
       <header class="header">
         <div class="header__icons">
-          <svg class="burger-icon" width="20" height="14">
+          <svg class="burger-icon" id="burger-icon" width="20" height="14">
             <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
           </svg>
           <svg class="union-svg --icon-color" width="53.12" height="24" fill="#1B63F0">
@@ -24,36 +24,36 @@
           </svg>
         </div>
         <nav class="navigation">
+          <div class="header__icons">
+            <svg class="burger-icon" id="burger-opened" width="20" height="14">
+              <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
+            </svg>
+
+            <svg
+              class="union-svg --icon-color"
+              id="union-opened"
+              width="53.12"
+              height="24"
+              fill="#1B63F0"
+            >
+              <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
+            </svg>
+          </div>
+          <svg class="cross" width="14" height="14">
+            <use xlink:href="/html__css/images/sprite.svg#cross"></use>
+          </svg>
+
           <ul>
-            <li><a href="#prefer">Categories</a></li>
-            <li><a href="#courses">Course</a></li>
-            <li><a href="#tour">Explore</a></li>
-            <li><a href="#shy">Degrees</a></li>
+            <li class="navigation__item"><a href="#prefer">Categories</a></li>
+            <li class="navigation__item"><a href="#courses">Course</a></li>
+            <li class="navigation__item"><a href="#tour">Explore</a></li>
+            <li class="navigation__item"><a href="#shy">Degrees</a></li>
           </ul>
         </nav>
         <button class="button active">Explore</button>
       </header>
     </div>
     <main>
-      <section class="menu">
-        <div class="menu__icons">
-          <svg class="burger-icon" width="20" height="14">
-            <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
-          </svg>
-          <svg class="union-svg" width="53.12" height="24" fill="#1B63F0">
-            <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
-          </svg>
-          <svg class="cross" width="14" height="14" fill="none">
-            <use xlink:href="/html__css/images/sprite.svg#cross"></use>
-          </svg>
-        </div>
-        <ul class="menu__list">
-          <li>Categories</li>
-          <li>Course</li>
-          <li>Explore</li>
-          <li>Degrees</li>
-        </ul>
-      </section>
       <div class="container">
         <section class="education" id="education">
           <svg class="illustration-icon">
@@ -731,5 +731,7 @@
         </section>
       </footer>
     </div>
+
+    <script src="/js/mobile-menu.js"></script>
   </body>
 </html>
