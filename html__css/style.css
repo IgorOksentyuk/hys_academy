@@ -1,5 +1,9 @@
 @import url(/html__css/normalize.css);
 @import url(/html__css/variables.css);
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--greyMain);
@@ -112,6 +116,7 @@ body {
   line-height: 1.09;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .header__icons {
   display: flex;
@@ -459,6 +464,7 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url("/html__css/images/tour-block/background-tour.svg");
+  background-repeat: no-repeat;
 }
 .tour__left {
   position: relative;
@@ -1256,9 +1262,18 @@ footer .sources__item ul {
 }
 footer .sources__item ul li {
   margin-bottom: 12px;
+  cursor: pointer;
+}
+footer .sources__item ul li:hover {
+  color: var(--graySourcesHover);
 }
 footer .sources__item-icons svg {
   margin-right: 20px;
+  --sources-color: var(--blackSources);
+  cursor: pointer;
+}
+footer .sources__item-icons svg:hover {
+  --sources-color: var(--graySourcesHover);
 }
 footer .sources__underline {
   height: 1px;
