@@ -38,4 +38,6 @@
   --purplePreferMarketing: rgba(148, 87, 243, 0.8);
   --redPreferEducation: rgba(254, 95, 96, 0.8);
   --grayCoursesUnderline: rgba(255, 255, 255, 0.3);
+  --blackSources: #25282b;
+  --graySourcesHover: #97f5cd;
 }
