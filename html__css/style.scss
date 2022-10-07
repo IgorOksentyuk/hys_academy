@@ -1352,6 +1352,7 @@ body {
         position: absolute;
         top: 150px;
         left: 80px;
+        margin: 0;
       }
     }
 
@@ -1372,6 +1373,11 @@ body {
         cursor: pointer;
       }
 
+      .active-page {
+        box-shadow: none;
+        border: 1px solid var(--greenLight);
+      }
+
       .block-subtitle:hover {
         box-shadow: 0 4px 16px var(--whiteShadow);
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1387,6 +1393,7 @@ body {
   @media screen and (min-width: 768px) {
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 
     &__box {
       flex-direction: row;
@@ -1398,12 +1405,22 @@ body {
       align-self: flex-start;
       margin-bottom: 20px;
     }
+
+    &__container {
+      align-self: flex-start;
+      display: flex;
+    }
+
     &__box {
       align-self: flex-start;
 
       &-numbers {
         flex-direction: column;
         margin-left: 107px;
+
+        .block-subtitle {
+          margin-bottom: 22px;
+        }
       }
     }
   }
