@@ -1,38 +1,43 @@
 const allPosts = [
   {
-    albumId: 1,
     id: 1,
     title: 'accusamus beatae ad facilis cum similique qui sunt',
     url: 'https://via.placeholder.com/600/92c952',
-    thumbnailUrl: 'https://via.placeholder.com/150/92c952',
+    userImage: 'https://via.placeholder.com/150/92c952',
+    redirectLink: 'https://jsonplaceholder.typicode.com',
+    category: 'Design',
   },
   {
-    albumId: 1,
     id: 2,
     title: 'reprehenderit est deserunt velit ipsam',
     url: 'https://via.placeholder.com/600/771796',
-    thumbnailUrl: 'https://via.placeholder.com/150/771796',
+    userImage: 'https://via.placeholder.com/150/771796',
+    redirectLink: 'https://jsonplaceholder.typicode.com',
+    category: 'Design',
   },
   {
-    albumId: 1,
     id: 3,
     title: 'officia porro iure quia iusto qui ipsa ut modi',
     url: 'https://via.placeholder.com/600/24f355',
-    thumbnailUrl: 'https://via.placeholder.com/150/24f355',
+    userImage: 'https://via.placeholder.com/150/24f355',
+    redirectLink: 'https://jsonplaceholder.typicode.com',
+    category: 'Design',
   },
   {
-    albumId: 1,
     id: 4,
     title: 'culpa odio esse rerum omnis laboriosam voluptate repudiandae',
     url: 'https://via.placeholder.com/600/d32776',
-    thumbnailUrl: 'https://via.placeholder.com/150/d32776',
+    userImage: 'https://via.placeholder.com/150/d32776',
+    redirectLink: 'https://jsonplaceholder.typicode.com',
+    category: 'Design',
   },
   {
-    albumId: 1,
     id: 5,
     title: 'natus nisi omnis corporis facere molestiae rerum in',
     url: 'https://via.placeholder.com/600/f66b97',
-    thumbnailUrl: 'https://via.placeholder.com/150/f66b97',
+    userImage: 'https://via.placeholder.com/150/f66b97',
+    redirectLink: 'https://jsonplaceholder.typicode.com',
+    category: 'Design',
   },
 ];
 
@@ -57,7 +62,7 @@ const getPostMarkup = (post) => {
   const item = `
   <div class="blog__box-item">
     <div class="blog__box-item-background"></div>
-      <p>DESIGN</p>
+      <p>${post.category}</p>
       <img
         class="blog__box-item-img"
         width="328"
@@ -66,11 +71,11 @@ const getPostMarkup = (post) => {
       />
       <img
         class="blog__box-item-man"
-        src="/html__css/images/blog-block/man_first.png"
+        src="${post.userImage}"
         alt="man_1"
       />
       <h3 class="block-subtitle">${post.title}</h3>
-      <p>Read Now</p>
+      <p><a href="${'https://jsonplaceholder.typicode.com'}"> Read Now</a></p>
   </div>`;
 
   return item;
