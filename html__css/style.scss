@@ -1334,18 +1334,27 @@ body {
         color: var(--blueDesign);
         top: 18px;
         left: 14px;
+        text-transform: uppercase;
       }
 
       p:last-of-type {
         position: absolute;
         top: 205px;
         left: 80px;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
       }
 
       &-man {
+        width: 48px;
+        height: 48px;
         position: absolute;
         top: 150px;
         left: 16px;
+        border-radius: 50%;
       }
 
       .block-subtitle {
