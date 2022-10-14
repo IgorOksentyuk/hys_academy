@@ -75,7 +75,6 @@ class Slider {
   #el;
   #data;
   #offset = 0;
-  // #screenWidth = window.screen.width;
   constructor(selector) {
     this.#el = document.querySelector(selector);
   }
@@ -160,7 +159,6 @@ class Slider {
     document.querySelector('#slider-line').style.transform = `translateX(${this.#offset}px)`;
   }
 }
-console.log(window.innerWidth);
 
 const slider = new Slider('#slider');
 
