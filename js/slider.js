@@ -175,3 +175,9 @@ btnLeft.addEventListener('click', () => {
 btnRight.addEventListener('click', () => {
   slider.handleRightClick();
 });
+
+//Slick slider for Courses section//
+
+$(document).ready(function () {
+  $('.courses__box').slick({});
+});
