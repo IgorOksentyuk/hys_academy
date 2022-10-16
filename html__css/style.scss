@@ -408,24 +408,62 @@ body {
   }
 
   &__box {
+    position: relative;
     display: flex;
-    align-items: center;
-
-    .circle {
-      margin: 5px;
-    }
 
     h3 {
       color: #fff;
     }
 
+    .slick-track {
+      display: flex;
+    }
+
+    // .slick-arrow {
+    //   font-size: 0;
+    //   width: 40px;
+    //   height: 40px;
+    //   position: absolute;
+    //   top: 50%;
+    //   border-radius: 50%;
+    //   border: none;
+    //   background-color: #fff;
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   box-shadow: 0 4px 16px var(--whiteShadow);
+    //   cursor: pointer;
+    // }
+
+    // .slick-arrow:hover {
+    //   background-color: var(--greenLight);
+    // }
+
+    // .slick-prev {
+    //   left: -60px;
+    //   background-image: url('/html__css/images/courses-block/arrow-left.svg');
+    // }
+
+    // .slick-prev:hover {
+    //   background-image: url('/html__css/images/courses-block/arrow-left-hover.svg');
+    // }
+
+    // .slick-next {
+    //   right: -40px;
+    //   background-image: url('/html__css/images/courses-block/arrow-right.svg');
+    // }
+
+    // .slick-next:hover {
+    //   background-image: url('/html__css/images/courses-block/arrow-right-hover.svg');
+    // }
+
     &-item {
-      width: 260px;
+      width: 270px;
       height: 364px;
       display: flex;
       flex-direction: column;
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
       border-radius: 8px;
+      margin-right: 20px;
 
       &-woman {
         position: absolute;
@@ -493,42 +531,42 @@ body {
     }
 
     .marketing {
-      display: none;
+      // display: none;
       background: url('/html__css/images/courses-block/marketing.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     .web {
-      display: none;
+      // display: none;
       background: url('/html__css/images/courses-block/web-design.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    @media screen and (min-width: 768px) {
-      .design {
-        margin-right: 20px;
-      }
+    // @media screen and (min-width: 768px) {
+    //   .design {
+    //     margin-right: 20px;
+    //   }
 
-      .marketing {
-        display: block;
-      }
+    //   .marketing {
+    //     display: block;
+    //   }
 
-      .circle {
-        margin: 20px;
-      }
-    }
+    //   .circle {
+    //     margin: 20px;
+    //   }
+    // }
 
-    @media screen and (min-width: 1440px) {
-      .marketing {
-        margin-right: 20px;
-      }
+    // @media screen and (min-width: 1440px) {
+    //   .marketing {
+    //     margin-right: 20px;
+    //   }
 
-      .web {
-        display: block;
-      }
-    }
+    //   .web {
+    //     display: block;
+    //   }
+    // }
   }
 }
 

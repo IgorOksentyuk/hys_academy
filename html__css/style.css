@@ -358,22 +358,23 @@ body {
   margin: 0 0 6px 0;
 }
 .courses__box {
+  position: relative;
   display: flex;
-  align-items: center;
-}
-.courses__box .circle {
-  margin: 5px;
 }
 .courses__box h3 {
   color: #fff;
 }
+.courses__box .slick-track {
+  display: flex;
+}
 .courses__box-item {
-  width: 260px;
+  width: 270px;
   height: 364px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   border-radius: 8px;
+  margin-right: 20px;
 }
 .courses__box-item-woman {
   position: absolute;
@@ -429,35 +430,14 @@ body {
   background-size: cover;
 }
 .courses__box .marketing {
-  display: none;
   background: url("/html__css/images/courses-block/marketing.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .courses__box .web {
-  display: none;
   background: url("/html__css/images/courses-block/web-design.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-@media screen and (min-width: 768px) {
-  .courses__box .design {
-    margin-right: 20px;
-  }
-  .courses__box .marketing {
-    display: block;
-  }
-  .courses__box .circle {
-    margin: 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .courses__box .marketing {
-    margin-right: 20px;
-  }
-  .courses__box .web {
-    display: block;
-  }
 }
 
 .tour {
