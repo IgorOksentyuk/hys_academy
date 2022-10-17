@@ -385,9 +385,6 @@ body {
 .courses {
   color: #fff;
   margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 80px;
 
   &__title {
@@ -409,7 +406,6 @@ body {
 
   &__box {
     position: relative;
-    display: flex;
 
     h3 {
       color: #fff;
@@ -419,42 +415,49 @@ body {
       display: flex;
     }
 
-    // .slick-arrow {
-    //   font-size: 0;
-    //   width: 40px;
-    //   height: 40px;
-    //   position: absolute;
-    //   top: 50%;
-    //   border-radius: 50%;
-    //   border: none;
-    //   background-color: #fff;
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   box-shadow: 0 4px 16px var(--whiteShadow);
-    //   cursor: pointer;
-    // }
+    .slick-list {
+      overflow: hidden;
+      max-width: 270px;
+      margin: 0 auto;
+      padding-top: 25px;
+    }
 
-    // .slick-arrow:hover {
-    //   background-color: var(--greenLight);
-    // }
+    .slick-arrow {
+      font-size: 0;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      margin: 5px;
+      top: 50%;
+      border-radius: 50%;
+      border: none;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0 4px 16px var(--whiteShadow);
+      cursor: pointer;
+    }
 
-    // .slick-prev {
-    //   left: -60px;
-    //   background-image: url('/html__css/images/courses-block/arrow-left.svg');
-    // }
+    .slick-arrow:hover {
+      background-color: var(--greenLight);
+    }
 
-    // .slick-prev:hover {
-    //   background-image: url('/html__css/images/courses-block/arrow-left-hover.svg');
-    // }
+    .slick-prev {
+      left: 0;
+      background-image: url('/html__css/images/courses-block/arrow-left.svg');
+    }
 
-    // .slick-next {
-    //   right: -40px;
-    //   background-image: url('/html__css/images/courses-block/arrow-right.svg');
-    // }
+    .slick-prev:hover {
+      background-image: url('/html__css/images/courses-block/arrow-left-hover.svg');
+    }
 
-    // .slick-next:hover {
-    //   background-image: url('/html__css/images/courses-block/arrow-right-hover.svg');
-    // }
+    .slick-next {
+      right: 0;
+      background-image: url('/html__css/images/courses-block/arrow-right.svg');
+    }
+
+    .slick-next:hover {
+      background-image: url('/html__css/images/courses-block/arrow-right-hover.svg');
+    }
 
     &-item {
       width: 270px;
@@ -463,7 +466,6 @@ body {
       flex-direction: column;
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
       border-radius: 8px;
-      margin-right: 20px;
 
       &-woman {
         position: absolute;
@@ -531,42 +533,44 @@ body {
     }
 
     .marketing {
-      // display: none;
       background: url('/html__css/images/courses-block/marketing.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     .web {
-      // display: none;
       background: url('/html__css/images/courses-block/web-design.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    // @media screen and (min-width: 768px) {
-    //   .design {
-    //     margin-right: 20px;
-    //   }
+    @media screen and (min-width: 550px) {
+      .slick-arrow {
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+      }
+    }
 
-    //   .marketing {
-    //     display: block;
-    //   }
+    @media screen and (min-width: 768px) {
+      .slick-list {
+        max-width: 580px;
+      }
 
-    //   .circle {
-    //     margin: 20px;
-    //   }
-    // }
+      &-item {
+        margin-right: 20px;
+      }
+    }
 
-    // @media screen and (min-width: 1440px) {
-    //   .marketing {
-    //     margin-right: 20px;
-    //   }
+    @media screen and (min-width: 1024px) {
+      .slick-list {
+        max-width: 870px;
+      }
 
-    //   .web {
-    //     display: block;
-    //   }
-    // }
+      .slick-next {
+        margin-right: 40px;
+      }
+    }
   }
 }
 

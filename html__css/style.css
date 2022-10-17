@@ -339,9 +339,6 @@ body {
 .courses {
   color: #fff;
   margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 80px;
 }
 .courses__title {
@@ -359,13 +356,49 @@ body {
 }
 .courses__box {
   position: relative;
-  display: flex;
 }
 .courses__box h3 {
   color: #fff;
 }
 .courses__box .slick-track {
   display: flex;
+}
+.courses__box .slick-list {
+  overflow: hidden;
+  max-width: 270px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+.courses__box .slick-arrow {
+  font-size: 0;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  margin: 5px;
+  top: 50%;
+  border-radius: 50%;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 4px 16px var(--whiteShadow);
+  cursor: pointer;
+}
+.courses__box .slick-arrow:hover {
+  background-color: var(--greenLight);
+}
+.courses__box .slick-prev {
+  left: 0;
+  background-image: url("/html__css/images/courses-block/arrow-left.svg");
+}
+.courses__box .slick-prev:hover {
+  background-image: url("/html__css/images/courses-block/arrow-left-hover.svg");
+}
+.courses__box .slick-next {
+  right: 0;
+  background-image: url("/html__css/images/courses-block/arrow-right.svg");
+}
+.courses__box .slick-next:hover {
+  background-image: url("/html__css/images/courses-block/arrow-right-hover.svg");
 }
 .courses__box-item {
   width: 270px;
@@ -374,7 +407,6 @@ body {
   flex-direction: column;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   border-radius: 8px;
-  margin-right: 20px;
 }
 .courses__box-item-woman {
   position: absolute;
@@ -438,6 +470,29 @@ body {
   background: url("/html__css/images/courses-block/web-design.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 550px) {
+  .courses__box .slick-arrow {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .courses__box .slick-list {
+    max-width: 580px;
+  }
+  .courses__box-item {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .courses__box .slick-list {
+    max-width: 870px;
+  }
+  .courses__box .slick-next {
+    margin-right: 40px;
+  }
 }
 
 .tour {
