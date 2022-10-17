@@ -179,5 +179,27 @@ btnRight.addEventListener('click', () => {
 //Slick slider for Courses section//
 
 $(document).ready(function () {
-  $('.courses__box').slick({});
+  $('.courses__box').slick({
+    mobileFirst: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: true,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
 });
