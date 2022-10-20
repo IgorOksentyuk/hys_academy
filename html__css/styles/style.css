@@ -1,18 +1,18 @@
-@import url(/html__css/normalize.css);
-@import url(/html__css/variables.css);
+@import url('/html__css/styles/normalize.css');
+@import url('/html__css/styles/variables.css');
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--greyMain);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.29;
   overflow-x: hidden;
   position: relative;
-  background-image: url("/html__css/images/background.svg");
+  background-image: url('/html__css/images/background.svg');
   background-repeat: no-repeat;
   background-position-x: right;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .block-title::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 230px;
   top: 20px;
@@ -176,7 +176,7 @@ body {
   position: relative;
 }
 .header .open ul li::after {
-  content: "";
+  content: '';
   width: 100%;
   border-bottom: 1px solid var(--blueHover);
   position: absolute;
@@ -388,17 +388,17 @@ body {
 }
 .courses__box .slick-prev {
   left: 0;
-  background-image: url("/html__css/images/courses-block/arrow-left.svg");
+  background-image: url('/html__css/images/courses-block/arrow-left.svg');
 }
 .courses__box .slick-prev:hover {
-  background-image: url("/html__css/images/courses-block/arrow-left-hover.svg");
+  background-image: url('/html__css/images/courses-block/arrow-left-hover.svg');
 }
 .courses__box .slick-next {
   right: 0;
-  background-image: url("/html__css/images/courses-block/arrow-right.svg");
+  background-image: url('/html__css/images/courses-block/arrow-right.svg');
 }
 .courses__box .slick-next:hover {
-  background-image: url("/html__css/images/courses-block/arrow-right-hover.svg");
+  background-image: url('/html__css/images/courses-block/arrow-right-hover.svg');
 }
 .courses__box-item {
   width: 270px;
@@ -457,17 +457,17 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .courses__box .design {
-  background: url("/html__css/images/courses-block/desing.png");
+  background: url('/html__css/images/courses-block/desing.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .courses__box .marketing {
-  background: url("/html__css/images/courses-block/marketing.png");
+  background: url('/html__css/images/courses-block/marketing.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .courses__box .web {
-  background: url("/html__css/images/courses-block/web-design.png");
+  background: url('/html__css/images/courses-block/web-design.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -498,7 +498,7 @@ body {
 .tour {
   display: flex;
   flex-direction: column;
-  background-image: url("/html__css/images/tour-block/background-tour.svg");
+  background-image: url('/html__css/images/tour-block/background-tour.svg');
   background-repeat: no-repeat;
 }
 .tour__left {
@@ -547,7 +547,7 @@ body {
   margin: 0 0 12px 0;
 }
 .tour__right-info ul {
-  list-style-image: url("/html__css/images/tour-block/ellipse.svg");
+  list-style-image: url('/html__css/images/tour-block/ellipse.svg');
 }
 .tour__right-info ul li {
   margin-bottom: 12px;
@@ -671,7 +671,7 @@ body {
   padding-bottom: 65px;
 }
 .business__left-item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 110px;
   width: 100%;
@@ -730,7 +730,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-image: url("/html__css/images/courses-block/desing.png");
+  background-image: url('/html__css/images/courses-block/desing.png');
   background-size: cover;
   margin: 0 24px;
   border-radius: 8px;
@@ -970,7 +970,8 @@ body {
   margin-top: 100px;
   padding-bottom: 54px;
   position: relative;
-  background: linear-gradient(rgba(69, 82, 156, 0.95), rgba(69, 82, 156, 0.95)), url("/html__css/images/courses-block/desing.png");
+  background: linear-gradient(rgba(69, 82, 156, 0.95), rgba(69, 82, 156, 0.95)),
+    url('/html__css/images/courses-block/desing.png');
 }
 .started .block-title::after {
   display: none;
@@ -1054,7 +1055,7 @@ body {
   color: #fff;
 }
 .started__right-box-item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 30px;
   width: 100%;
@@ -1331,7 +1332,7 @@ footer .sources__underline {
     display: none;
   }
   footer .sources::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 155px;
     width: 100%;
