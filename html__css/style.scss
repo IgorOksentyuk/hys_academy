@@ -1370,24 +1370,34 @@ body {
         color: var(--blueDesign);
         top: 18px;
         left: 14px;
+        text-transform: uppercase;
       }
 
       p:last-of-type {
         position: absolute;
         top: 205px;
         left: 80px;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
       }
 
       &-man {
+        width: 48px;
+        height: 48px;
         position: absolute;
         top: 150px;
         left: 16px;
+        border-radius: 50%;
       }
 
       .block-subtitle {
         position: absolute;
         top: 150px;
         left: 80px;
+        margin: 0;
       }
     }
 
@@ -1396,7 +1406,8 @@ body {
       margin-top: 24px;
       justify-content: center;
 
-      .block-subtitle {
+      .page-number {
+        font-weight: 600;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1408,12 +1419,17 @@ body {
         cursor: pointer;
       }
 
-      .block-subtitle:hover {
+      .active-page {
+        box-shadow: none;
+        border: 1px solid var(--greenLight);
+      }
+
+      .page-number:hover {
         box-shadow: 0 4px 16px var(--whiteShadow);
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .block-subtitle:active {
+      .page-number:active {
         box-shadow: none;
         border: 1px solid var(--greenLight);
       }
@@ -1425,6 +1441,7 @@ body {
   .blog {
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 
     &__box {
       flex-direction: row;
@@ -1438,12 +1455,22 @@ body {
       align-self: flex-start;
       margin-bottom: 20px;
     }
+
+    &__container {
+      align-self: flex-start;
+      display: flex;
+    }
+
     &__box {
       align-self: flex-start;
 
       &-numbers {
         flex-direction: column;
         margin-left: 107px;
+
+        .block-subtitle {
+          margin-bottom: 22px;
+        }
       }
     }
   }
