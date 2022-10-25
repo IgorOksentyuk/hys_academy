@@ -44,9 +44,13 @@ const allPosts = [
 const paginator = (selector, data) => {
   let postsTemplate = ``;
 
-  data.forEach((post) => {
-    postsTemplate += getPostMarkup(post);
-  });
+  if (!Array.isArray(data)) {
+    return console.log('Data is not array.');
+  } else {
+    data.forEach((post) => {
+      postsTemplate += getPostMarkup(post);
+    });
+  }
 
   const template = ` <div class="blog__box">
   ${postsTemplate}
@@ -82,15 +86,10 @@ const getPostMarkup = (post) => {
 };
 
 const selectPosts = (pageNumber) => {
-  const start = (pageNumber - 1) * 2;
-  const end = start + 2;
+  const postPerPage = 2;
+  const start = (pageNumber - 1) * postPerPage;
+  const end = start + postPerPage;
   const sliced = allPosts.slice(start, end);
-  const containerCenter = document.querySelector('.blog__container');
-  containerCenter.style.cssText = `align-self: start`;
-
-  if (sliced.length < 2) {
-    containerCenter.style.cssText = `align-self: center`;
-  }
 
   return sliced;
 };
@@ -100,22 +99,36 @@ const onPageClick = (pageNumber) => {
   paginator('#paginator', slicedPages);
 };
 
-const pages = document.querySelectorAll('.blog__box-numbers .block-subtitle');
+const pages = document.getElementById('pages-container');
 
-const setActive = () => {
-  for (let index = 0; index < pages.length; index++) {
-    pages[index].classList.remove('active-page');
+let currentPageEl;
+
+const setPages = (data) => {
+  for (let i = 0; i < data.length / 2; i++) {
+    const page = document.createElement('div');
+    page.classList.add('page-number');
+    page.setAttribute('data-page-number', `${i + 1}`);
+    page.innerText = i + 1;
+    pages.appendChild(page);
+    if (i === 0) {
+      currentPageEl = page;
+      page.classList.add('active-page');
+    }
   }
 };
 
-for (let index = 0; index < pages.length; index++) {
-  pages[index].addEventListener('click', (elem) => {
-    const pageNumber = Number(elem.target.getAttribute('data-page-number'));
+pages.onclick = (e) => {
+  const page = e.target;
+  const pageNumber = Number(page.getAttribute('data-page-number'));
+  if (currentPageEl) {
+    currentPageEl.classList.remove('active-page');
+  }
+  if (pageNumber > 0) {
     onPageClick(pageNumber);
-
-    setActive();
-    pages[index].classList.add('active-page');
-  });
-}
+    currentPageEl = page;
+    page.classList.add('active-page');
+  }
+};
 
 paginator('#paginator', selectPosts(1));
+setPages(allPosts);
