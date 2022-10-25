@@ -1023,6 +1023,8 @@ body {
 @media screen and (min-width: 768px) {
   .prefer {
     &__box {
+      width: 414px;
+
       .web__item {
         display: block;
         margin-left: 20px;
@@ -1045,6 +1047,8 @@ body {
 @media screen and (min-width: 1440px) {
   .prefer {
     &__box {
+      width: 828px;
+
       .marketing__item {
         display: block;
         margin-left: 20px;
