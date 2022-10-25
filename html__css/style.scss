@@ -144,11 +144,7 @@ body {
     position: fixed;
     top: -200%;
     background-color: #fff;
-<<<<<<< HEAD
-    width: inherit;
-=======
     width: 100%;
->>>>>>> main
     z-index: 3;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -174,24 +170,13 @@ body {
     display: flex;
     flex-direction: column;
 
-    .header__icons {
-      margin-bottom: 94px;
-
+    @media screen and (min-width: 768px) {
       .burger-icon {
-        --icon-color: #000;
+        display: none;
       }
-    }
 
-    ul {
-      padding: 24px;
-      z-index: 3;
-
-      li {
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.14;
-        margin-bottom: 65px;
-        position: relative;
+      .union-svg {
+        margin-left: 50px;
       }
 
       li::after {
@@ -261,34 +246,6 @@ body {
     .cross {
       display: none;
     }
-<<<<<<< HEAD
-
-    .navigation {
-      display: flex;
-      justify-content: end;
-      width: 100%;
-      position: static;
-      background: none;
-
-      ul {
-        display: flex;
-        margin-top: 36px;
-
-        li {
-          margin-left: 20px;
-
-          a {
-            color: #fff;
-          }
-        }
-
-        li::after {
-          display: none;
-        }
-      }
-    }
-=======
->>>>>>> main
   }
 }
 
@@ -584,60 +541,31 @@ body {
   }
 }
 
-<<<<<<< HEAD
-    @media screen and (min-width: 550px) {
-      .slick-arrow {
-        width: 40px;
-        height: 40px;
-        margin: 20px;
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .slick-list {
-        max-width: 580px;
-      }
-
-      &-item {
-        margin-right: 20px;
-      }
-    }
-
-    @media screen and (min-width: 1024px) {
-      .slick-list {
-        max-width: 870px;
-      }
-
-      .slick-next {
-        margin-right: 40px;
-      }
-=======
-@media screen and (min-width: 768px) {
-  .courses {
-    .design {
-      margin-right: 20px;
-    }
-
-    .marketing {
-      display: block;
-    }
-
-    .circle {
-      margin: 20px;
-    }
+@media screen and (min-width: 550px) {
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .courses {
-    .marketing {
-      margin-right: 20px;
-    }
+@media screen and (min-width: 768px) {
+  .slick-list {
+    max-width: 580px;
+  }
 
-    .web {
-      display: block;
->>>>>>> main
-    }
+  .courses__box-item {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slick-list {
+    max-width: 870px;
+  }
+
+  .slick-next {
+    margin-right: 40px;
   }
 }
 
@@ -1088,17 +1016,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-  @media screen and (min-width: 768px) {
-    &__box {
-      width: 414px;
-    }
-
-    .block-title::after {
-      display: block;
-      left: 380px;
-      top: 20px;
-=======
 @media screen and (min-width: 768px) {
   .prefer {
     &__box {
@@ -1117,16 +1034,10 @@ body {
       .circle {
         margin: 20px;
       }
->>>>>>> main
     }
   }
 }
 
-<<<<<<< HEAD
-  @media screen and (min-width: 1440px) {
-    &__box {
-      width: 828px;
-=======
 @media screen and (min-width: 1440px) {
   .prefer {
     &__box {
@@ -1157,7 +1068,6 @@ body {
           background-color: var(--redPreferEducation);
         }
       }
->>>>>>> main
     }
   }
 }
@@ -1480,27 +1390,18 @@ body {
         color: var(--blueDesign);
         top: 18px;
         left: 14px;
-        text-transform: uppercase;
       }
 
       p:last-of-type {
         position: absolute;
         top: 205px;
         left: 80px;
-
-        a {
-          text-decoration: none;
-          color: #000;
-        }
       }
 
       &-man {
-        width: 48px;
-        height: 48px;
         position: absolute;
         top: 150px;
         left: 16px;
-        border-radius: 50%;
       }
 
       .block-subtitle {
@@ -1534,11 +1435,7 @@ body {
         border: 1px solid var(--greenLight);
       }
 
-<<<<<<< HEAD
-      .block-subtitle:hover {
-=======
       .page-number:hover {
->>>>>>> main
         box-shadow: 0 4px 16px var(--whiteShadow);
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
@@ -1684,12 +1581,6 @@ footer {
       &-icons {
         svg {
           margin-right: 20px;
-          --sources-color: var(--blackSources);
-          cursor: pointer;
-        }
-
-        svg:hover {
-          --sources-color: var(--graySourcesHover);
         }
       }
     }
