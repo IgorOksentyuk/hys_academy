@@ -105,7 +105,7 @@ class Slider {
       fill="none"
       stroke="#64BE97"
     >
-      <use xlink:href="/src/html__css/images/sprite.svg#arrow-left"></use>
+      <use xlink:href="sprite.svg#arrow-left"></use>
     </svg>
   </div>
   <div class="prefer__box">
@@ -121,7 +121,7 @@ class Slider {
       fill="none"
       stroke="#64BE97"
     >
-      <use xlink:href="/src/html__css/images/sprite.svg#arrow-right"></use>
+      <use xlink:href="sprite.svg#arrow-right"></use>
     </svg>
   </div>`;
 

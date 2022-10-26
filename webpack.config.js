@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,8 +11,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
     filename: '[name][contenthash].js',
-    clean: true,
     assetModuleFilename: '[name][ext]',
+    clean: true,
   },
   devServer: {
     static: {
@@ -45,7 +46,15 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: 'svg-sprite-loader',
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              publicPath: '',
+            },
+          },
+        ],
       },
     ],
   },
@@ -55,5 +64,6 @@ module.exports = {
       filename: 'index.html',
       template: 'src/html__css/index.html',
     }),
+    new SpriteLoaderPlugin(),
   ],
 };
