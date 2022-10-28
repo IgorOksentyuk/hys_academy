@@ -803,8 +803,7 @@ body {
   position: relative;
 }
 .prefer__title .block-title::after {
-  left: 230px;
-  top: 50px;
+  left: 380px;
 }
 .prefer__title p {
   text-align: center;
