@@ -1218,6 +1218,9 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
+  .blog {
+    flex-direction: row;
+  }
   .blog .block-title {
     align-self: flex-start;
     margin-bottom: 20px;
