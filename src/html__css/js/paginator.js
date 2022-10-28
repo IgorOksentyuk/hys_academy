@@ -48,10 +48,10 @@ const paginator = (selector, data) => {
     postsTemplate += getPostMarkup(post);
   });
 
-  const template = ` <div class="blog__box">
-  ${postsTemplate}
-
-</div>`;
+  const template = `<h2 class="block-title">Latest Blog</h2>
+  <div class="blog__box">
+    ${postsTemplate}
+  </div>`;
 
   const element = document.querySelector(selector);
 
@@ -94,7 +94,7 @@ const onPageClick = (pageNumber) => {
   paginator('#paginator', slicedPages);
 };
 
-const pages = document.querySelectorAll('.blog__box-numbers .block-subtitle');
+const pages = document.querySelectorAll('.blog__box-numbers .page-number');
 
 const setActive = () => {
   for (let index = 0; index < pages.length; index++) {

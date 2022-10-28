@@ -1015,8 +1015,8 @@ body {
     }
 
     .block-title::after {
-      left: 230px;
-      top: 50px;
+      left: 270px;
+      top: 45px;
     }
 
     p {
@@ -1063,14 +1063,21 @@ body {
   }
 }
 
-@media screen and (min-width: 418px) {
-  .block-title::after {
-    display: none;
+@media screen and (min-width: 402px) {
+  .prefer__title {
+    .block-title::after {
+      display: none;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .prefer {
+    .block-subtitle {
+      display: block;
+      left: 400px;
+      top: 20px;
+    }
     &__box {
       width: 414px;
     }
@@ -1355,15 +1362,13 @@ body {
   color: #000;
   margin: 100px 24px 0 24px;
 
-  &__title {
-    .block-title {
-      margin: 0;
-      position: relative;
-    }
+  .block-title {
+    margin: 0;
+    position: relative;
+  }
 
-    .block-title::after {
-      left: 180px;
-    }
+  .block-title::after {
+    left: 180px;
   }
 
   &__box {
@@ -1445,7 +1450,7 @@ body {
       margin-top: 24px;
       justify-content: center;
 
-      .block-subtitle {
+      .page-number {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1462,12 +1467,12 @@ body {
         border: 1px solid var(--greenLight);
       }
 
-      .block-subtitle:hover {
+      .page-number:hover {
         box-shadow: 0 4px 16px var(--whiteShadow);
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .block-subtitle:active {
+      .page-number:active {
         box-shadow: none;
         border: 1px solid var(--greenLight);
       }
@@ -1489,24 +1494,22 @@ body {
 
 @media screen and (min-width: 1440px) {
   .blog {
-    &__title {
+    flex-direction: row;
+
+    .block-title {
       align-self: flex-start;
       margin-bottom: 20px;
     }
 
-    &__container {
-      align-self: flex-start;
-      display: flex;
-    }
-
     &__box {
+      display: flex;
       align-self: flex-start;
 
       &-numbers {
         flex-direction: column;
         margin-left: 107px;
 
-        .block-subtitle {
+        .page-number {
           margin-bottom: 22px;
         }
       }
