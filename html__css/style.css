@@ -803,7 +803,8 @@ body {
   position: relative;
 }
 .prefer__title .block-title::after {
-  left: 380px;
+  left: 270px;
+  top: 45px;
 }
 .prefer__title p {
   text-align: center;
@@ -840,13 +841,18 @@ body {
   color: #fff;
   padding: 10px;
 }
-@media screen and (min-width: 418px) {
+@media screen and (min-width: 402px) {
   .prefer .block-title::after {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .prefer .block-title::after {
+    display: block;
+    left: 400px;
+    top: 20px;
+  }
   .prefer__box {
     width: 414px;
   }
