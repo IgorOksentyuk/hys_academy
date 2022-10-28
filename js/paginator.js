@@ -52,10 +52,10 @@ const paginator = (selector, data) => {
     });
   }
 
-  const template = ` <div class="blog__box">
-  ${postsTemplate}
-  
-</div>`;
+  const template = `<h2 class="block-title">Latest Blog</h2>
+  <div class="blog__box">
+    ${postsTemplate}
+  </div>`;
 
   const element = document.querySelector(selector);
 
