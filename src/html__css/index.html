@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1 maximum-scale=1" />
     <title>HYS Academy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,7 @@
             <use xlink:href="sprite.svg#burger-icon"></use>
           </svg>
           <svg class="union-svg --icon-color" width="53.12" height="24" fill="#1B63F0">
-            <use xlink:href="sprite.svg#union-icon"></use>
+            <use xlink:href="/sprite.svg#union-icon"></use>
           </svg>
         </div>
         <nav class="navigation">
@@ -68,33 +68,23 @@
             <a class="education__info-started-btn button active" href="#form">Get started</a>
           </div>
 
-          <ul>
-            <li>
-              <a href="#"
-                ><img src="/src/html__css/images/education-block/logo_youfone.png" alt="youfone"
-              /></a>
+          <ul class="education__logos">
+            <li class="education__logos-logo">
+              <a href="#">Google</a>
             </li>
-            <li>
-              <a href="#"
-                ><img src="/src/html__css/images/education-block/logo_nice.png" alt="nice"
-              /></a>
+            <li class="education__logos-logo">
+              <a href="#">
+                <div class="window">
+                  <div class="window__square"></div>
+                  <div class="window__square"></div>
+                  <div class="window__square"></div>
+                  <div class="window__square"></div>
+                </div>
+                Microsoft</a
+              >
             </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="/src/html__css/images/education-block/logo_swishfund.png"
-                  alt="swishfund"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="/src/html__css/images/education-block/logo_brico.png" alt="brico"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="/src/html__css/images/education-block/logo_praxis.png" alt="praxis"
-              /></a>
+            <li class="education__logos-logo">
+              <a href="#">youfone</a>
             </li>
           </ul>
         </section>
@@ -147,11 +137,7 @@
 
           <div class="courses__box">
             <div class="courses__box-item design">
-              <img
-                class="courses__box-item-woman"
-                src="/src/html__css/images/courses-block/woman-design.png"
-                alt="man_1"
-              />
+              <img class="courses__box-item-woman" src="woman-design.png" alt="man_1" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">DESIGN</p>
                 <h3 class="block-subtitle">Learn Photoshop title</h3>
@@ -160,22 +146,28 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
             </div>
 
             <div class="courses__box-item marketing">
-              <img
-                class="courses__box-item-woman"
-                src="/src/html__css/images/courses-block/woman-marketing.png"
-                alt="man_2"
-              />
+              <img class="courses__box-item-woman" src="woman-marketing.png" alt="man_2" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">Marketing</p>
                 <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
@@ -184,22 +176,28 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
             </div>
 
             <div class="courses__box-item web">
-              <img
-                class="courses__box-item-woman"
-                src="/src/html__css/images/courses-block/woman-web.png"
-                alt="man_3"
-              />
+              <img class="courses__box-item-woman" src="woman-web.png" alt="man_3" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">Web design</p>
                 <h3 class="block-subtitle">Learn Photoshop</h3>
@@ -208,21 +206,27 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
             </div>
             <div class="courses__box-item marketing">
-              <img
-                class="courses__box-item-woman"
-                src="/src/html__css/images/courses-block/woman-marketing.png"
-                alt="man_2"
-              />
+              <img class="courses__box-item-woman" src="woman-marketing.png" alt="man_2" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">Marketing</p>
                 <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
@@ -231,11 +235,21 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/src/html__css/images/courses-block/star-white.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
@@ -247,7 +261,7 @@
       <div class="container-big">
         <section class="tour" id="tour">
           <div class="tour__left">
-            <img src="/src/html__css/images/tour-block/rectangle.png" alt="rectangle" />
+            <img src="rectangle.png" alt="rectangle" />
             <div class="tour__left-play-btn">
               <svg width="14" height="18">
                 <use xlink:href="sprite.svg#play"></use>
@@ -476,7 +490,7 @@
               class="customers__gallery-img"
               width="270.03"
               height="270.03"
-              src="/src/html__css/images/customers-block/customers-photo.png"
+              src="customers-photo.png"
               alt="customers-photo"
             />
           </div>
@@ -486,7 +500,9 @@
               <h2 class="block-title">Our great customers</h2>
             </div>
 
-            <img src="/src/html__css/images/customers-block/quotes.png" alt="quotes" />
+            <svg width="39" height="31">
+              <use xlink:href="sprite.svg#quotes"></use>
+            </svg>
             <article>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -583,14 +599,14 @@
 
       <form action="#" class="form" id="form">
         <label for="name"></label>
-        <input type="text" name="name" placeholder="Name Surname" />
+        <input type="text" name="name" id="name-input" placeholder="Name Surname" />
 
         <label for="phone"></label>
-        <input type="number" name="phone" placeholder="Phone" />
+        <input type="number" name="phone" id="phone-input" placeholder="Phone" />
 
         <label for="email"></label>
-        <input type="email" name="email" placeholder="Enter your email..." />
-        <button class="button form__btn" type="submit">Send</button>
+        <input type="email" name="email" id="email-input" placeholder="Enter your email..." />
+        <button class="button form__btn" id="send-btn" type="submit">Send</button>
       </form>
     </main>
 
