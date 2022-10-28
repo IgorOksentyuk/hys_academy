@@ -1316,15 +1316,13 @@ body {
   color: #000;
   margin: 100px 24px 0 24px;
 
-  &__title {
-    .block-title {
-      margin: 0;
-      position: relative;
-    }
+  .block-title {
+    margin: 0;
+    position: relative;
+  }
 
-    .block-title::after {
-      left: 180px;
-    }
+  .block-title::after {
+    left: 180px;
   }
 
   &__box {
@@ -1451,24 +1449,22 @@ body {
 
 @media screen and (min-width: 1440px) {
   .blog {
-    &__title {
+    flex-direction: row;
+
+    .block-title {
       align-self: flex-start;
       margin-bottom: 20px;
     }
 
-    &__container {
-      align-self: flex-start;
-      display: flex;
-    }
-
     &__box {
+      display: flex;
       align-self: flex-start;
 
       &-numbers {
         flex-direction: column;
         margin-left: 107px;
 
-        .block-subtitle {
+        .page-number {
           margin-bottom: 22px;
         }
       }

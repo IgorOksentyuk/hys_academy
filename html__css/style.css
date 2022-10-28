@@ -1082,11 +1082,11 @@ body {
   color: #000;
   margin: 100px 24px 0 24px;
 }
-.blog__title .block-title {
+.blog .block-title {
   margin: 0;
   position: relative;
 }
-.blog__title .block-title::after {
+.blog .block-title::after {
   left: 180px;
 }
 .blog__box {
@@ -1195,22 +1195,22 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
-  .blog__title {
+  .blog {
+    flex-direction: row;
+  }
+  .blog .block-title {
     align-self: flex-start;
     margin-bottom: 20px;
   }
-  .blog__container {
-    align-self: flex-start;
-    display: flex;
-  }
   .blog__box {
+    display: flex;
     align-self: flex-start;
   }
   .blog__box-numbers {
     flex-direction: column;
     margin-left: 107px;
   }
-  .blog__box-numbers .block-subtitle {
+  .blog__box-numbers .page-number {
     margin-bottom: 22px;
   }
 }
