@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
@@ -41,11 +42,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource',
       },
       {
         test: /\.svg$/,
+        include: /.*_sprite\.svg/,
         use: [
           {
             loader: 'svg-sprite-loader',
@@ -65,5 +67,9 @@ module.exports = {
       template: 'src/html__css/index.html',
     }),
     new SpriteLoaderPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
   ],
 };
