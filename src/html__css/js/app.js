@@ -3,38 +3,15 @@ import Storage from './storage.js';
 import Select from './select.js';
 
 export default class App {
+  #slider;
+  #select;
   init() {
     // Initialized all components.
-    const slider = new Slider('#slider');
-    const select = new Select('#select');
+    this.#slider = new Slider('#slider');
+    this.#select = new Select('#select', this.onAlbumChange.bind(this));
     const storage = new Storage();
 
-    fetch(`https://jsonplaceholder.typicode.com/albums/1/photos`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        slider.setData(data.slice(0, 8));
-
-        slider.render();
-        onButtonsClick();
-      });
-
-    select.render();
-
-    // Slider logic.
-    const onButtonsClick = () => {
-      const btnLeft = document.querySelector('.circle.left');
-      const btnRight = document.querySelector('.circle.right');
-
-      btnLeft.addEventListener('click', () => {
-        slider.handleLeftClick();
-      });
-
-      btnRight.addEventListener('click', () => {
-        slider.handleRightClick();
-      });
-    };
+    this.onAlbumChange(1);
 
     // Forms logic.
     const form = document.getElementById('form');
@@ -64,53 +41,6 @@ export default class App {
       storage.clearEmail();
     });
 
-    // --> Select logic.
-    const dropdownBtn = document.querySelector('.prefer__select-btn');
-    const dropdownList = document.querySelector('.prefer__select-list');
-
-    // Click on button; Open/close dropdown list.
-    dropdownBtn.addEventListener('click', () => {
-      dropdownList.classList.toggle('prefer__select-list-visible');
-      dropdownBtn.classList.add('prefer__select-btn--active');
-    });
-
-    // Click on item, choose text of item, save focus os item.
-    dropdownList.onclick = (e) => {
-      e.stopPropagation();
-      const currentItem = e.target;
-      const currentItemNumber = currentItem.getAttribute('data-value');
-      dropdownBtn.innerText = currentItem.innerText;
-      dropdownList.classList.remove('prefer__select-list-visible');
-      dropdownBtn.focus();
-      const selectedAlbum = select.onSelectChange(currentItemNumber);
-
-      fetch(`https://jsonplaceholder.typicode.com/albums/${selectedAlbum}/photos`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          slider.setData(data.slice(0, 8));
-
-          slider.render();
-          onButtonsClick();
-        });
-    };
-
-    //Click outside button -> closed dropdown, remove focus from button.
-    document.addEventListener('click', (e) => {
-      if (e.target !== dropdownBtn) {
-        dropdownList.classList.remove('prefer__select-list-visible');
-        dropdownBtn.classList.remove('prefer__select-btn--active');
-      }
-    });
-
-    //Press on Esc or Tab closed dropdown.
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' || e.key === 'Tab') {
-        dropdownList.classList.remove('prefer__select-list-visible');
-      }
-    });
-
     // --> Slick slider logic.
 
     $(document).ready(function () {
@@ -137,6 +67,33 @@ export default class App {
           },
         ],
       });
+    });
+  }
+
+  onAlbumChange(albumId) {
+    fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.#slider.setData(data.slice(0, 8));
+
+        this.#slider.render();
+        this.onButtonsClick();
+      });
+  }
+
+  // Slider logic.
+  onButtonsClick() {
+    const btnLeft = document.querySelector('.circle.left');
+    const btnRight = document.querySelector('.circle.right');
+
+    btnLeft.addEventListener('click', () => {
+      this.#slider.handleLeftClick();
+    });
+
+    btnRight.addEventListener('click', () => {
+      this.#slider.handleRightClick();
     });
   }
 }
