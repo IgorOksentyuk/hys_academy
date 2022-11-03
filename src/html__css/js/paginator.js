@@ -44,18 +44,14 @@ const allPosts = [
 const paginator = (selector, data) => {
   let postsTemplate = ``;
 
-  if (!Array.isArray(data)) {
-    return console.log('Data is not array.');
-  } else {
-    data.forEach((post) => {
-      postsTemplate += getPostMarkup(post);
-    });
-  }
+  data.forEach((post) => {
+    postsTemplate += getPostMarkup(post);
+  });
 
-  const template = ` <div class="blog__box">
-  ${postsTemplate}
-  
-</div>`;
+  const template = `<h2 class="block-title">Latest Blog</h2>
+  <div class="blog__box">
+    ${postsTemplate}
+  </div>`;
 
   const element = document.querySelector(selector);
 
@@ -86,9 +82,8 @@ const getPostMarkup = (post) => {
 };
 
 const selectPosts = (pageNumber) => {
-  const postPerPage = 2;
-  const start = (pageNumber - 1) * postPerPage;
-  const end = start + postPerPage;
+  const start = (pageNumber - 1) * 2;
+  const end = start + 2;
   const sliced = allPosts.slice(start, end);
 
   return sliced;

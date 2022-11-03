@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1 maximum-scale=1" />
     <title>HYS Academy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,23 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/html__css/style.min.css" />
   </head>
   <body>
     <div class="container">
       <header class="header">
         <div class="header__icons">
           <svg class="burger-icon" id="burger-icon" width="20" height="14">
-            <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
+            <use xlink:href="sprite.svg#burger-icon"></use>
           </svg>
           <svg class="union-svg --icon-color" width="53.12" height="24" fill="#1B63F0">
-            <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
+            <use xlink:href="/sprite.svg#union-icon"></use>
           </svg>
         </div>
         <nav class="navigation">
           <div class="header__icons">
             <svg class="burger-icon" id="burger-opened" width="20" height="14">
-              <use xlink:href="/html__css/images/sprite.svg#burger-icon"></use>
+              <use xlink:href="sprite.svg#burger-icon"></use>
             </svg>
 
             <svg
@@ -36,11 +35,11 @@
               height="24"
               fill="#1B63F0"
             >
-              <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
+              <use xlink:href="sprite.svg#union-icon"></use>
             </svg>
           </div>
           <svg class="cross" width="14" height="14">
-            <use xlink:href="/html__css/images/sprite.svg#cross"></use>
+            <use xlink:href="sprite.svg#cross"></use>
           </svg>
 
           <ul>
@@ -57,7 +56,7 @@
       <div class="container">
         <section class="education" id="education">
           <svg class="illustration-icon">
-            <use xlink:href="/html__css/images/sprite.svg#illustration"></use>
+            <use xlink:href="sprite.svg#illustration"></use>
           </svg>
           <div class="education__info">
             <h1 class="education__info-title">Education is the most powerfull weapon</h1>
@@ -69,31 +68,23 @@
             <a class="education__info-started-btn button active" href="#form">Get started</a>
           </div>
 
-          <ul>
-            <li>
-              <a href="#"
-                ><img src="/html__css/images/education-block/logo_youfone.png" alt="youfone"
-              /></a>
+          <ul class="education__logos">
+            <li class="education__logos-logo">
+              <a href="#">Google</a>
             </li>
-            <li>
-              <a href="#"
-                ><img src="/html__css/images/education-block/logo_nice.png" alt="nice"
-              /></a>
+            <li class="education__logos-logo">
+              <a href="#">
+                <div class="window">
+                  <div class="window__square"></div>
+                  <div class="window__square"></div>
+                  <div class="window__square"></div>
+                  <div class="window__square"></div>
+                </div>
+                Microsoft</a
+              >
             </li>
-            <li>
-              <a href="#"
-                ><img src="/html__css/images/education-block/logo_swishfund.png" alt="swishfund"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="/html__css/images/education-block/logo_brico.png" alt="brico"
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="/html__css/images/education-block/logo_praxis.png" alt="praxis"
-              /></a>
+            <li class="education__logos-logo">
+              <a href="#">youfone</a>
             </li>
           </ul>
         </section>
@@ -105,28 +96,28 @@
           <div class="shy__container">
             <div class="shy__container-item">
               <svg width="53.28" height="52.92">
-                <use xlink:href="/html__css/images/sprite.svg#certificate"></use>
+                <use xlink:href="sprite.svg#certificate"></use>
               </svg>
               <h3 class="block-subtitle">Certificate</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
             </div>
             <div class="shy__container-item">
               <svg width="40" height="54">
-                <use xlink:href="/html__css/images/sprite.svg#compass"></use>
+                <use xlink:href="sprite.svg#compass"></use>
               </svg>
               <h3 class="block-subtitle">Life Programs</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
             </div>
             <div class="shy__container-item">
               <svg width="42.67" height="52.04">
-                <use xlink:href="/html__css/images/sprite.svg#telescope"></use>
+                <use xlink:href="sprite.svg#telescope"></use>
               </svg>
               <h3 class="block-subtitle">Affordability</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.</p>
             </div>
             <div class="shy__container-item">
               <svg width="37.8" height="53.03">
-                <use xlink:href="/html__css/images/sprite.svg#list"></use>
+                <use xlink:href="sprite.svg#list"></use>
               </svg>
               <h3 class="block-subtitle">Social</h3>
               <p>
@@ -146,11 +137,7 @@
 
           <div class="courses__box">
             <div class="courses__box-item design">
-              <img
-                class="courses__box-item-woman"
-                src="/html__css/images/courses-block/woman-design.png"
-                alt="man_1"
-              />
+              <img class="courses__box-item-woman" src="woman-design.png" alt="man_1" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">DESIGN</p>
                 <h3 class="block-subtitle">Learn Photoshop title</h3>
@@ -159,22 +146,28 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
             </div>
 
             <div class="courses__box-item marketing">
-              <img
-                class="courses__box-item-woman"
-                src="/html__css/images/courses-block/woman-marketing.png"
-                alt="man_2"
-              />
+              <img class="courses__box-item-woman" src="woman-marketing.png" alt="man_2" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">Marketing</p>
                 <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
@@ -183,22 +176,28 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
             </div>
 
             <div class="courses__box-item web">
-              <img
-                class="courses__box-item-woman"
-                src="/html__css/images/courses-block/woman-web.png"
-                alt="man_3"
-              />
+              <img class="courses__box-item-woman" src="woman-web.png" alt="man_3" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">Web design</p>
                 <h3 class="block-subtitle">Learn Photoshop</h3>
@@ -207,21 +206,27 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
             </div>
             <div class="courses__box-item marketing">
-              <img
-                class="courses__box-item-woman"
-                src="/html__css/images/courses-block/woman-marketing.png"
-                alt="man_2"
-              />
+              <img class="courses__box-item-woman" src="woman-marketing.png" alt="man_2" />
               <div class="courses__box-item-top">
                 <p class="courses__box-item-top-title">Marketing</p>
                 <h3 class="block-subtitle">Learn Photoshop title trun...</h3>
@@ -230,11 +235,21 @@
                 <p class="courses__box-item-bottom-price">$260</p>
                 <s class="courses__box-item-bottom-discount">$360</s>
                 <div class="courses__box-item-bottom-rating">
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-yellow.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
-                  <img src="/html__css/images/courses-block/star-white.png" alt="star" />
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-yellow"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
+                  <svg width="9" height="10">
+                    <use xlink:href="sprite.svg#star-white"></use>
+                  </svg>
                 </div>
                 <p class="courses__box-item-bottom-mark">(4)</p>
               </div>
@@ -246,10 +261,10 @@
       <div class="container-big">
         <section class="tour" id="tour">
           <div class="tour__left">
-            <img src="/html__css/images/tour-block/rectangle.png" alt="rectangle" />
+            <img src="rectangle.png" alt="rectangle" />
             <div class="tour__left-play-btn">
               <svg width="14" height="18">
-                <use xlink:href="/html__css/images/sprite.svg#play"></use>
+                <use xlink:href="sprite.svg#play"></use>
               </svg>
             </div>
           </div>
@@ -301,21 +316,21 @@
               <div class="business__left-item-box">
                 <div class="business__left-item-box-date">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#calendar"></use>
+                    <use xlink:href="sprite.svg#calendar"></use>
                   </svg>
                   <p>July 8, 2018</p>
                 </div>
 
                 <div class="business__left-item-box-time">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#clock"></use>
+                    <use xlink:href="sprite.svg#clock"></use>
                   </svg>
                   <p>5:00pm - 7:00pm</p>
                 </div>
 
                 <div class="business__left-item-box-location">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#location"></use>
+                    <use xlink:href="sprite.svg#location"></use>
                   </svg>
                   <p>United States</p>
                 </div>
@@ -327,21 +342,21 @@
               <div class="business__left-item-box">
                 <div class="business__left-item-box-date">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#calendar"></use>
+                    <use xlink:href="sprite.svg#calendar"></use>
                   </svg>
                   <p>July 8, 2018</p>
                 </div>
 
                 <div class="business__left-item-box-time">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#clock"></use>
+                    <use xlink:href="sprite.svg#clock"></use>
                   </svg>
                   <p>5:00pm - 7:00pm</p>
                 </div>
 
                 <div class="business__left-item-box-location">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#location"></use>
+                    <use xlink:href="sprite.svg#location"></use>
                   </svg>
                   <p>United States</p>
                 </div>
@@ -353,21 +368,21 @@
               <div class="business__left-item-box">
                 <div class="business__left-item-box-date">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#calendar"></use>
+                    <use xlink:href="sprite.svg#calendar"></use>
                   </svg>
                   <p>July 8, 2018</p>
                 </div>
 
                 <div class="business__left-item-box-time">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#clock"></use>
+                    <use xlink:href="sprite.svg#clock"></use>
                   </svg>
                   <p>5:00pm - 7:00pm</p>
                 </div>
 
                 <div class="business__left-item-box-location">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#location"></use>
+                    <use xlink:href="sprite.svg#location"></use>
                   </svg>
                   <p>United States</p>
                 </div>
@@ -379,21 +394,21 @@
               <div class="business__left-item-box">
                 <div class="business__left-item-box-date">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#calendar"></use>
+                    <use xlink:href="sprite.svg#calendar"></use>
                   </svg>
                   <p>July 8, 2018</p>
                 </div>
 
                 <div class="business__left-item-box-time">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#clock"></use>
+                    <use xlink:href="sprite.svg#clock"></use>
                   </svg>
                   <p>5:00pm - 7:00pm</p>
                 </div>
 
                 <div class="business__left-item-box-location">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#location"></use>
+                    <use xlink:href="sprite.svg#location"></use>
                   </svg>
                   <p>United States</p>
                 </div>
@@ -422,21 +437,21 @@
                 <h3 class="block-subtitle">International Conference...</h3>
                 <div class="business__right-panel-bg-date">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#calendar-white"></use>
+                    <use xlink:href="sprite.svg#calendar-white"></use>
                   </svg>
                   <p>July 8, 2018</p>
                 </div>
 
                 <div class="business__right-panel-bg-time">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#clock-white"></use>
+                    <use xlink:href="sprite.svg#clock-white"></use>
                   </svg>
                   <p>5pm - 7pm</p>
                 </div>
 
                 <div class="business__right-panel-bg-location">
                   <svg width="20" height="20">
-                    <use xlink:href="/html__css/images/sprite.svg#location-white"></use>
+                    <use xlink:href="sprite.svg#location-white"></use>
                   </svg>
                   <p>United States</p>
                 </div>
@@ -465,7 +480,7 @@
         <section class="customers" id="customers">
           <div class="customers__background">
             <svg width="786" height="597">
-              <use xlink:href="/html__css/images/sprite.svg#customers-background"></use>
+              <use xlink:href="sprite.svg#customers-background"></use>
             </svg>
           </div>
 
@@ -475,7 +490,7 @@
               class="customers__gallery-img"
               width="270.03"
               height="270.03"
-              src="/html__css/images/customers-block/customers-photo.png"
+              src="customers-photo.png"
               alt="customers-photo"
             />
           </div>
@@ -485,7 +500,9 @@
               <h2 class="block-title">Our great customers</h2>
             </div>
 
-            <img src="/html__css/images/customers-block/quotes.png" alt="quotes" />
+            <svg width="39" height="31">
+              <use xlink:href="sprite.svg#quotes"></use>
+            </svg>
             <article>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -530,32 +547,32 @@
           <div class="started__right">
             <div class="started__right-title">
               <svg class="chain-icon" width="24" height="24">
-                <use xlink:href="/html__css/images/sprite.svg#chain"></use>
+                <use xlink:href="sprite.svg#chain"></use>
               </svg>
               <h2 class="block-title">Quick Link</h2>
             </div>
             <div class="started__right-box">
               <div class="started__right-box-item">
                 <svg width="24" height="24">
-                  <use xlink:href="/html__css/images/sprite.svg#pen"></use>
+                  <use xlink:href="sprite.svg#pen"></use>
                 </svg>
                 <h4><a href="#blog">Tution and Fees</a></h4>
               </div>
               <div class="started__right-box-item">
                 <svg width="24" height="24">
-                  <use xlink:href="/html__css/images/sprite.svg#case"></use>
+                  <use xlink:href="sprite.svg#case"></use>
                 </svg>
                 <h4><a href="#prefer">Review & Rating</a></h4>
               </div>
               <div class="started__right-box-item">
                 <svg width="24" height="24">
-                  <use xlink:href="/html__css/images/sprite.svg#book"></use>
+                  <use xlink:href="sprite.svg#book"></use>
                 </svg>
                 <h4><a href="#education">Universoty Facilities</a></h4>
               </div>
               <div class="started__right-box-item">
                 <svg width="18" height="18">
-                  <use xlink:href="/html__css/images/sprite.svg#message"></use>
+                  <use xlink:href="sprite.svg#message"></use>
                 </svg>
                 <h4><a href="#customers">Community Q&A</a></h4>
               </div>
@@ -566,9 +583,6 @@
 
       <div class="container">
         <section class="blog" id="blog">
-          <div class="blog__title">
-            <h2 class="block-title">Latest Blog</h2>
-          </div>
           <div id="paginator"></div>
           <div class="blog__box-numbers" id="pages-container"></div>
         </section>
@@ -576,14 +590,14 @@
 
       <form action="#" class="form" id="form">
         <label for="name"></label>
-        <input type="text" name="name" placeholder="Name Surname" />
+        <input type="text" name="name" id="name-input" placeholder="Name Surname" />
 
         <label for="phone"></label>
-        <input type="number" name="phone" placeholder="Phone" />
+        <input type="number" name="phone" id="phone-input" placeholder="Phone" />
 
         <label for="email"></label>
-        <input type="email" name="email" placeholder="Enter your email..." />
-        <button class="button form__btn" type="submit">Send</button>
+        <input type="email" name="email" id="email-input" placeholder="Enter your email..." />
+        <button class="button form__btn" id="send-btn" type="submit">Send</button>
       </form>
     </main>
 
@@ -591,7 +605,7 @@
       <footer>
         <section class="sources">
           <svg class="union-svg --icon-color" width="53.12px" height="24px" fill="#1B63F0">
-            <use xlink:href="/html__css/images/sprite.svg#union-icon"></use>
+            <use xlink:href="sprite.svg#union-icon"></use>
           </svg>
           <div class="sources__item">
             <h3 class="block-subtitle">Company</h3>
@@ -621,16 +635,16 @@
             <h3 class="block-subtitle">Social Media</h3>
             <div class="sources__item-icons">
               <svg width="13" height="22">
-                <use xlink:href="/html__css/images/sprite.svg#facebook"></use>
+                <use xlink:href="sprite.svg#facebook"></use>
               </svg>
               <svg width="24" height="24">
-                <use xlink:href="/html__css/images/sprite.svg#instagram"></use>
+                <use xlink:href="sprite.svg#instagram"></use>
               </svg>
               <svg width="24" height="24">
-                <use xlink:href="/html__css/images/sprite.svg#twitter"></use>
+                <use xlink:href="sprite.svg#twitter"></use>
               </svg>
               <svg width="24" height="24">
-                <use xlink:href="/html__css/images/sprite.svg#youtube"></use>
+                <use xlink:href="sprite.svg#youtube"></use>
               </svg>
             </div>
           </div>
@@ -650,6 +664,5 @@
         </section>
       </footer>
     </div>
-    <script src="/js/index.js" type="module" defer></script>
   </body>
 </html>
