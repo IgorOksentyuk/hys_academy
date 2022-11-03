@@ -964,8 +964,12 @@ body {
 }
 
 @media screen and (min-width: 570px) {
-  .block-title {
-    align-self: center;
+  .business {
+    &__left {
+      .block-title {
+        align-self: center;
+      }
+    }
   }
 }
 
@@ -1451,6 +1455,7 @@ body {
       justify-content: center;
 
       .page-number {
+        font-weight: 600;
         display: flex;
         align-items: center;
         justify-content: center;
