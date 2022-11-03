@@ -216,43 +216,45 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .burger-icon {
-    display: none;
-  }
+  .header {
+    .burger-icon {
+      display: none;
+    }
 
-  .union-svg {
-    margin-left: 50px;
-  }
+    .union-svg {
+      margin-left: 50px;
+    }
 
-  #union-opened {
-    display: none;
-  }
+    #union-opened {
+      display: none;
+    }
 
-  .cross {
-    display: none;
-  }
+    .cross {
+      display: none;
+    }
 
-  .navigation {
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    position: static;
-    background: none;
-
-    ul {
+    .navigation {
       display: flex;
-      margin-top: 36px;
+      justify-content: end;
+      width: 100%;
+      position: static;
+      background: none;
 
-      li {
-        margin-left: 20px;
+      ul {
+        display: flex;
+        margin-top: 36px;
 
-        a {
-          color: #fff;
+        li {
+          margin-left: 20px;
+
+          a {
+            color: #fff;
+          }
         }
-      }
 
-      li::after {
-        display: none;
+        li::after {
+          display: none;
+        }
       }
     }
   }
