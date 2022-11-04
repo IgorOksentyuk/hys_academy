@@ -647,13 +647,14 @@ body {
       top: 200px;
       left: 170px;
       background-color: var(--greenLight);
-      border: 2px solid #fff;
+      outline: 2px solid #fff;
       border-radius: 100%;
       box-shadow: 0 4px 16px hsla(133, 55%, 54%, 0.56);
+      cursor: pointer;
     }
 
     &-play-btn:hover {
-      border: none;
+      outline: none;
       transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
