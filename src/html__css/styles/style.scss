@@ -966,9 +966,11 @@ body {
 }
 
 @media screen and (min-width: 570px) {
-  .business__left {
-    .block-title {
-      align-self: center;
+  .business {
+    &__left {
+      .block-title {
+        align-self: center;
+      }
     }
   }
 }
@@ -1128,6 +1130,7 @@ body {
   .left {
     margin-right: 20px;
   }
+}
 
   &__box {
     width: 207px;
