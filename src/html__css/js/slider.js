@@ -59,14 +59,18 @@ export default class Slider {
     const allMarkup = this.createMarkup();
 
     this.#el.innerHTML = allMarkup;
+    this.setOffset(0);
+  }
+
+  setOffset(offset) {
+    this.#offset = offset;
+    document.querySelector('#slider-line').style.transform = `translateX(${this.#offset}px)`;
   }
 
   handleLeftClick() {
-    this.#offset += 207;
-    if (this.#offset > 0) {
-      this.#offset = 0;
+    if (this.#offset + 207 <= 0) {
+      this.setOffset(this.#offset + 207);
     }
-    document.querySelector('#slider-line').style.transform = `translateX(${this.#offset}px)`;
   }
 
   handleRightClick() {
@@ -80,9 +84,7 @@ export default class Slider {
     }
 
     if (this.#offset - 207 >= -maxLimit) {
-      this.#offset -= 207;
+      this.setOffset(this.#offset - 207);
     }
-
-    document.querySelector('#slider-line').style.transform = `translateX(${this.#offset}px)`;
   }
 }

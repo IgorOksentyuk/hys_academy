@@ -1,26 +1,19 @@
 import Slider from './slider.js';
 import Storage from './storage.js';
+import Select from './select.js';
 
 export default class App {
+  #slider;
+  #select;
   init() {
-    const slider = new Slider('#slider');
+    // Initialized all components.
+    this.#slider = new Slider('#slider');
+    this.#select = new Select('#select', this.onAlbumChange.bind(this));
     const storage = new Storage();
-    const allSlides = storage.getSliderData();
 
-    slider.setData(allSlides);
+    this.onAlbumChange(1);
 
-    slider.render();
-
-    const btnLeft = document.querySelector('.circle.left');
-    const btnRight = document.querySelector('.circle.right');
-
-    btnLeft.addEventListener('click', () => {
-      slider.handleLeftClick();
-    });
-    btnRight.addEventListener('click', () => {
-      slider.handleRightClick();
-    });
-
+    // Forms logic.
     const form = document.getElementById('form');
     const nameInput = document.getElementById('name-input');
     const phoneInput = document.getElementById('phone-input');
@@ -48,7 +41,7 @@ export default class App {
       storage.clearEmail();
     });
 
-    //Slick slider for Courses section//
+    // --> Slick slider logic.
 
     $(document).ready(function () {
       $('.courses__box').slick({
@@ -74,6 +67,33 @@ export default class App {
           },
         ],
       });
+    });
+  }
+
+  onAlbumChange(albumId) {
+    fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.#slider.setData(data.slice(0, 8));
+
+        this.#slider.render();
+        this.onButtonsClick();
+      });
+  }
+
+  // Slider logic.
+  onButtonsClick() {
+    const btnLeft = document.querySelector('.circle.left');
+    const btnRight = document.querySelector('.circle.right');
+
+    btnLeft.addEventListener('click', () => {
+      this.#slider.handleLeftClick();
+    });
+
+    btnRight.addEventListener('click', () => {
+      this.#slider.handleRightClick();
     });
   }
 }
