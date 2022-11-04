@@ -80,6 +80,9 @@ export default class App {
 
         this.#slider.render();
         this.onButtonsClick();
+      })
+      .catch((error) => {
+        console.log('Error: ', error);
       });
   }
 
