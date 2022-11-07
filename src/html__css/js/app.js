@@ -19,26 +19,26 @@ export default class App {
     const phoneInput = document.getElementById('phone-input');
     const emailInput = document.getElementById('email-input');
 
-    nameInput.addEventListener('change', (event) => {
-      storage.setSurname(event.target.value);
+    nameInput.addEventListener('input', (event) => {
+      storage.setInputValue('inputName', event.target.value);
     });
 
-    phoneInput.addEventListener('change', (event) => {
-      storage.setPhoneNumber(event.target.value);
+    phoneInput.addEventListener('input', (event) => {
+      storage.setInputValue('phone-number', event.target.value);
     });
 
-    emailInput.addEventListener('change', (event) => {
-      storage.setEmail(event.target.value);
+    emailInput.addEventListener('input', (event) => {
+      storage.setInputValue('email', event.target.value);
     });
 
-    nameInput.value = storage.getSurname();
-    phoneInput.value = storage.getPhoneNumber();
-    emailInput.value = storage.getEmail();
+    nameInput.value = storage.getInputValue('inputName');
+    phoneInput.value = storage.getInputValue('phone-number');
+    emailInput.value = storage.getInputValue('email');
 
     form.addEventListener('submit', () => {
-      storage.clearSurname();
-      storage.clearPhoneNumber();
-      storage.clearEmail();
+      storage.clearInputValue('inputName');
+      storage.clearInputValue('phone-number');
+      storage.clearInputValue('email');
     });
 
     // --> Slick slider logic.
