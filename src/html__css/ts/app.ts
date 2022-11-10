@@ -1,6 +1,8 @@
 import Slider from './slider';
 import Storage from './storage';
 import Select from './select';
+import $ from 'jquery';
+import 'slick-carousel';
 
 export default class App {
   #slider: any;
