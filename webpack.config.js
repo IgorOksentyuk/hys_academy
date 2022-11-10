@@ -2,11 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const loader = require('sass-loader');
 
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, 'src/html__css/js/index.js'),
+    bundle: path.resolve(__dirname, 'src/html__css/ts/index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -58,7 +59,17 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.ts$/,
+        use: {
+          loader: 'ts-loader',
+        },
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
