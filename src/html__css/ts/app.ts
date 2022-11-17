@@ -1,36 +1,42 @@
 import Slider from './slider';
 import Storage from './storage';
 import Select from './select';
+
+import { BaseApp } from './models/baseApp.model';
+
 import $ from 'jquery';
 import 'slick-carousel';
 
-export default class App {
-  #slider: any;
-  #select: any;
+export default class App extends BaseApp {
+  #slider?: Slider;
+  #select?: Select;
   init() {
     // Initialized all components.
     this.#slider = new Slider('#slider');
-    this.#select = new Select('#select', this.onAlbumChange.bind(this));
+    this.#select = new Select('#select', this.getSliderData.bind(this));
     const storage = new Storage();
 
-    this.onAlbumChange(1);
+    this.getSliderData(1);
 
     // Forms logic.
-    const form: any = document.getElementById('form');
-    const nameInput: any = document.getElementById('name-input');
-    const phoneInput: any = document.getElementById('phone-input');
-    const emailInput: any = document.getElementById('email-input');
+    const form = document.getElementById('form') as HTMLInputElement;
+    const nameInput = document.getElementById('name-input') as HTMLInputElement;
+    const phoneInput = document.getElementById('phone-input') as HTMLInputElement;
+    const emailInput = document.getElementById('email-input') as HTMLInputElement;
 
-    nameInput.addEventListener('input', (event: any) => {
-      storage.setInputValue('inputName', event.target.value);
+    nameInput.addEventListener('input', (event: Event) => {
+      const nameInputTarget = event.target as HTMLInputElement;
+      storage.setInputValue('inputName', nameInputTarget.value);
     });
 
-    phoneInput.addEventListener('input', (event: any) => {
-      storage.setInputValue('phone-number', event.target.value);
+    phoneInput.addEventListener('input', (event: Event) => {
+      const phoneInputTarget = event.target as HTMLInputElement;
+      storage.setInputValue('phone-number', phoneInputTarget.value);
     });
 
-    emailInput.addEventListener('input', (event: any) => {
-      storage.setInputValue('email', event.target.value);
+    emailInput.addEventListener('input', (event: Event) => {
+      const emailInputTarget = event.target as HTMLInputElement;
+      storage.setInputValue('email', emailInputTarget.value);
     });
 
     nameInput.value = storage.getInputValue('inputName');
@@ -72,15 +78,15 @@ export default class App {
     });
   }
 
-  onAlbumChange(albumId: number) {
+  getSliderData(albumId: number) {
     fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        this.#slider.setData(data.slice(0, 8));
+        this.#slider?.setData(data.slice(0, 8));
 
-        this.#slider.render();
+        this.#slider?.render();
         this.onButtonsClick();
       })
       .catch((error) => {
@@ -89,16 +95,16 @@ export default class App {
   }
 
   // Slider logic.
-  onButtonsClick() {
-    const btnLeft: any = document.querySelector('.circle.left');
-    const btnRight: any = document.querySelector('.circle.right');
+  onButtonsClick(): void {
+    const btnLeft = document.querySelector('.circle.left');
+    const btnRight = document.querySelector('.circle.right');
 
-    btnLeft.addEventListener('click', () => {
-      this.#slider.handleLeftClick();
+    btnLeft?.addEventListener('click', () => {
+      this.#slider?.handleLeftClick();
     });
 
-    btnRight.addEventListener('click', () => {
-      this.#slider.handleRightClick();
+    btnRight?.addEventListener('click', () => {
+      this.#slider?.handleRightClick();
     });
   }
 }
