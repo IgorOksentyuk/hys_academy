@@ -25,6 +25,7 @@ export default class Select {
       const currentItem = e.target;
       const currentItemNumber = currentItem.getAttribute('data-value');
       this.#dropdownBtn.innerText = currentItem.innerText;
+      this.#dropdownBtn.style.color = '#000';
       this.#dropdownList.classList.remove('prefer__select-list-visible');
       this.#dropdownBtn.focus();
       onSelectChange(currentItemNumber);
