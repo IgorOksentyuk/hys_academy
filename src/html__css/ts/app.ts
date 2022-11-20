@@ -1,10 +1,12 @@
-import Slider from './slider.js';
-import Storage from './storage.js';
-import Select from './select.js';
+import Slider from './slider';
+import Storage from './storage';
+import Select from './select';
+import $ from 'jquery';
+import 'slick-carousel';
 
 export default class App {
-  #slider;
-  #select;
+  #slider: any;
+  #select: any;
   init() {
     // Initialized all components.
     this.#slider = new Slider('#slider');
@@ -14,20 +16,20 @@ export default class App {
     this.onAlbumChange(1);
 
     // Forms logic.
-    const form = document.getElementById('form');
-    const nameInput = document.getElementById('name-input');
-    const phoneInput = document.getElementById('phone-input');
-    const emailInput = document.getElementById('email-input');
+    const form: any = document.getElementById('form');
+    const nameInput: any = document.getElementById('name-input');
+    const phoneInput: any = document.getElementById('phone-input');
+    const emailInput: any = document.getElementById('email-input');
 
-    nameInput.addEventListener('input', (event) => {
+    nameInput.addEventListener('input', (event: any) => {
       storage.setInputValue('inputName', event.target.value);
     });
 
-    phoneInput.addEventListener('input', (event) => {
+    phoneInput.addEventListener('input', (event: any) => {
       storage.setInputValue('phone-number', event.target.value);
     });
 
-    emailInput.addEventListener('input', (event) => {
+    emailInput.addEventListener('input', (event: any) => {
       storage.setInputValue('email', event.target.value);
     });
 
@@ -70,7 +72,7 @@ export default class App {
     });
   }
 
-  onAlbumChange(albumId) {
+  onAlbumChange(albumId: number) {
     fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
       .then((response) => {
         return response.json();
@@ -88,8 +90,8 @@ export default class App {
 
   // Slider logic.
   onButtonsClick() {
-    const btnLeft = document.querySelector('.circle.left');
-    const btnRight = document.querySelector('.circle.right');
+    const btnLeft: any = document.querySelector('.circle.left');
+    const btnRight: any = document.querySelector('.circle.right');
 
     btnLeft.addEventListener('click', () => {
       this.#slider.handleLeftClick();

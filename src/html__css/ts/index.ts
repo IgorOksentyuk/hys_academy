@@ -8,13 +8,12 @@ import '../images/tour-block/rectangle.png';
 import '../images/customers-block/customers-photo.png';
 
 import 'jquery';
-import 'slick-carousel';
-import './mobile-menu.js';
-import './paginator.js';
-import './slick.min.js';
-import './slider.js';
+import './mobile-menu.ts';
+import './paginator.ts';
+import './slick.min.ts';
+import './slider.ts';
 
-import App from './app.js';
+import App from './app';
 
 const app = new App();
 app.init();

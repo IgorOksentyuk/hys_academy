@@ -1,16 +1,18 @@
+import { SliderItem } from './@types/sliderItem';
+
 export default class Slider {
-  #el;
-  #data;
-  #offset = 0;
-  constructor(selector) {
+  #el: HTMLDivElement | null = null;
+  #data: SliderItem[] | null = null;
+  #offset: number = 0;
+  constructor(selector: string) {
     this.#el = document.querySelector(selector);
   }
 
-  setData(data) {
+  setData(data: SliderItem[] | null) {
     this.#data = data;
   }
 
-  createSliderItemMarkup(obj) {
+  createSliderItemMarkup(obj: SliderItem) {
     const itemMarkup = `
       <div class="prefer__box-line-item" style="background-image: url('${obj.url}');">
           <h3 class="block-subtitle">${obj.title}</h3>
@@ -21,7 +23,7 @@ export default class Slider {
 
   createMarkup() {
     let itemsMarkup = ``;
-    this.#data.forEach((item) => {
+    this.#data?.forEach((item: SliderItem) => {
       itemsMarkup += this.createSliderItemMarkup(item);
     });
     const allMarkup = `<div class="circle left">
@@ -58,13 +60,14 @@ export default class Slider {
   render() {
     const allMarkup = this.createMarkup();
 
-    this.#el.innerHTML = allMarkup;
+    this.#el!.innerHTML = allMarkup;
     this.setOffset(0);
   }
 
-  setOffset(offset) {
+  setOffset(offset: number) {
     this.#offset = offset;
-    document.querySelector('#slider-line').style.transform = `translateX(${this.#offset}px)`;
+    const sliderLine: HTMLDivElement | null = document.querySelector('#slider-line');
+    return (sliderLine!.style.transform = `translateX(${this.#offset}px)`);
   }
 
   handleLeftClick() {
@@ -76,11 +79,11 @@ export default class Slider {
   handleRightClick() {
     let maxLimit;
     if (window.innerWidth < 768) {
-      maxLimit = this.#data.length * 207 - 207;
+      maxLimit = this.#data!.length * 207 - 207;
     } else if (window.innerWidth > 768 && window.innerWidth < 1440) {
-      maxLimit = this.#data.length * 207 - 2 * 207;
+      maxLimit = this.#data!.length * 207 - 2 * 207;
     } else {
-      maxLimit = this.#data.length * 207 - 4 * 207;
+      maxLimit = this.#data!.length * 207 - 4 * 207;
     }
 
     if (this.#offset - 207 >= -maxLimit) {

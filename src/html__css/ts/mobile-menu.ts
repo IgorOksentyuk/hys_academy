@@ -1,8 +1,8 @@
-const hamburgerBtn = document.querySelector('.burger-icon');
-const hamburgerOpened = document.getElementById('burger-opened');
-const crossBtn = document.querySelector('.cross');
-const navItems = document.querySelectorAll('.navigation__item');
-const navMenu = document.querySelector('.navigation');
+const hamburgerBtn: any = document.querySelector('.burger-icon');
+const hamburgerOpened: any = document.getElementById('burger-opened');
+const crossBtn: any = document.querySelector('.cross');
+const navItems: any = document.querySelectorAll('.navigation__item');
+const navMenu: any = document.querySelector('.navigation');
 
 matchMedia('only screen and (min-width:768px)').addEventListener('change', () =>
   navMenu.classList.remove('open'),
@@ -20,7 +20,7 @@ crossBtn.addEventListener('click', () => {
   navMenu.classList.remove('open');
 });
 
-navItems.forEach((item) =>
+navItems.forEach((item: any) =>
   item.addEventListener('click', () => {
     navMenu.classList.remove('open');
   }),

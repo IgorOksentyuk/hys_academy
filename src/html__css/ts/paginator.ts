@@ -41,10 +41,10 @@ const allPosts = [
   },
 ];
 
-const paginator = (selector, data) => {
+const paginator = (selector: any, data: any) => {
   let postsTemplate = ``;
 
-  data.forEach((post) => {
+  data.forEach((post: any) => {
     postsTemplate += getPostMarkup(post);
   });
 
@@ -58,7 +58,7 @@ const paginator = (selector, data) => {
   element.innerHTML = template;
 };
 
-const getPostMarkup = (post) => {
+const getPostMarkup = (post: any) => {
   const item = `
   <div class="blog__box-item">
     <div class="blog__box-item-background"></div>
@@ -81,7 +81,7 @@ const getPostMarkup = (post) => {
   return item;
 };
 
-const selectPosts = (pageNumber) => {
+const selectPosts = (pageNumber: any) => {
   const start = (pageNumber - 1) * 2;
   const end = start + 2;
   const sliced = allPosts.slice(start, end);
@@ -89,18 +89,18 @@ const selectPosts = (pageNumber) => {
   return sliced;
 };
 
-const onPageClick = (pageNumber) => {
+const onPageClick = (pageNumber: any) => {
   const slicedPages = selectPosts(pageNumber);
   paginator('#paginator', slicedPages);
 };
 
-const pages = document.getElementById('pages-container');
+const pages: any = document.getElementById('pages-container');
 
-let currentPageEl;
+let currentPageEl: any;
 
-const setPages = (data) => {
+const setPages = (data: any) => {
   for (let i = 0; i < data.length / 2; i++) {
-    const page = document.createElement('div');
+    const page: any = document.createElement('div');
     page.classList.add('page-number');
     page.setAttribute('data-page-number', `${i + 1}`);
     page.innerText = i + 1;
@@ -112,7 +112,7 @@ const setPages = (data) => {
   }
 };
 
-pages.onclick = (e) => {
+pages.onclick = (e: any) => {
   const page = e.target;
   const pageNumber = Number(page.getAttribute('data-page-number'));
   if (currentPageEl) {
