@@ -1,8 +1,11 @@
 import { IStorage } from './models/storage.model';
+import { LocalStorage } from './decorators/localStorage.decorator';
 
 export default class Storage implements IStorage {
+  @LocalStorage: Function;
+  localData: string = '';
   public getInputValue<T>(inputName: string): T {
-    return JSON.parse(localStorage.getItem(inputName) as string) as T;
+     return JSON.parse(this.localData);
   }
 
   public setInputValue<T>(inputName: string, inputValue: T): void {
