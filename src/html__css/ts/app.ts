@@ -3,6 +3,7 @@ import Storage from './storage';
 import Select from './select';
 
 import { BaseApp } from './models/baseApp.model';
+import { ReadOnly } from './decorators/readOnly.decorator';
 
 import $ from 'jquery';
 import 'slick-carousel';
@@ -10,6 +11,8 @@ import 'slick-carousel';
 export default class App extends BaseApp {
   #slider?: Slider;
   #select?: Select;
+
+  // @ReadOnly
   init() {
     // Initialized all components.
     this.#slider = new Slider('#slider');
@@ -44,6 +47,7 @@ export default class App extends BaseApp {
     emailInput.value = storage.getInputValue('email');
 
     form.addEventListener('submit', () => {
+      console.log('submitted');
       storage.clearInputValue('inputName');
       storage.clearInputValue('phone-number');
       storage.clearInputValue('email');
