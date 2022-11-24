@@ -1,3 +1,3 @@
-export function ReadOnly(target: Function, key: string, descriptor: any) {
+export function ReadOnly(target: Object, key: string, descriptor: PropertyDescriptor) {
   descriptor.writable = false;
 }
