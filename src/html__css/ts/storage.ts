@@ -5,12 +5,12 @@ export default class Storage implements IStorage {
   @LocalStorage
   localData: string = '';
 
-  public getInputValue<T>(inputName: string): T {
-    return JSON.parse(this.localData);
+  public getInputValue<T>(localData: string): T {
+    return JSON.parse(localStorage.getItem(localData) as string) as T;
   }
 
-  public setInputValue<T>(inputName: string, inputValue: T): void {
-    localStorage.setItem(inputName, JSON.stringify(inputValue));
+  public setInputValue<T>(inputName: string, localData: T): void {
+    localStorage.setItem(inputName, JSON.stringify(localData));
   }
 
   public clearInputValue(inputValue: string) {
