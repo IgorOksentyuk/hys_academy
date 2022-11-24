@@ -1,6 +1,4 @@
-import Storage from '../storage';
-
-export function LocalStorage(target: Storage, key: string) {
+export function LocalStorage(target: Object, key: string) {
   function getInputValue<T>(inputName: string): T {
     return JSON.parse(localStorage.getItem(inputName) as string) as T;
   }
