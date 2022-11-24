@@ -12,7 +12,7 @@ export default class App extends BaseApp {
   #slider?: Slider;
   #select?: Select;
 
-  // @ReadOnly
+  @ReadOnly
   init() {
     // Initialized all components.
     this.#slider = new Slider('#slider');
