@@ -1,18 +1,15 @@
-export default class Storage {
-  getSliderData() {
-    let sliderData: any = window.localStorage.getItem('sliderData');
-    return JSON.parse(sliderData);
+import { IStorage } from './models/storage.model';
+
+export default class Storage implements IStorage {
+  public getInputValue<T>(inputName: string): T {
+    return JSON.parse(localStorage.getItem(inputName) as string) as T;
   }
 
-  getInputValue(inputName: any) {
-    return window.localStorage.getItem(inputName);
+  public setInputValue<T>(inputName: string, inputValue: T): void {
+    localStorage.setItem(inputName, JSON.stringify(inputValue));
   }
 
-  setInputValue(inputName: any, inputValue: any) {
-    window.localStorage.setItem(inputName, inputValue);
-  }
-
-  clearInputValue(inputValue: any) {
-    window.localStorage.removeItem(inputValue);
+  public clearInputValue(inputValue: string) {
+    localStorage.removeItem(inputValue);
   }
 }

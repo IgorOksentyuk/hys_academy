@@ -1,6 +1,7 @@
-import { SelectOptions } from './@types/selectOptionsEnum';
+import { SelectOptionsEnum } from './models/@types/selectOptionsEnum';
+import { ISelect } from './models/select.model';
 
-export default class Select {
+export default class Select implements ISelect {
   #el: HTMLDivElement | null = null;
   #dropdownList: HTMLDivElement | null = null;
   #dropdownBtn: HTMLButtonElement | null = null;
@@ -10,7 +11,7 @@ export default class Select {
     this.init(onSelectChange);
   }
 
-  init(onSelectChange: (albumId: number) => void) {
+  public init(onSelectChange: (albumId: number) => void) {
     // --> Select logic.
     this.#dropdownBtn = document.querySelector('.prefer__select-btn');
     this.#dropdownList = document.querySelector('.prefer__select-list');
@@ -49,19 +50,19 @@ export default class Select {
     });
   }
 
-  createMarkup() {
-    const allMarkup = `<button class="prefer__select-btn">${SelectOptions[0]}</button>
+  public createMarkup() {
+    const allMarkup = `<button class="prefer__select-btn">${SelectOptionsEnum[0]}</button>
 
     <ul class="prefer__select-list">
-      <li class="prefer__select-list-item" data-value="1">${SelectOptions[0]}</li>
-      <li class="prefer__select-list-item" data-value="2">${SelectOptions[1]}</li>
-      <li class="prefer__select-list-item" data-value="3">${SelectOptions[2]}</li>
+      <li class="prefer__select-list-item" data-value="1">${SelectOptionsEnum[0]}</li>
+      <li class="prefer__select-list-item" data-value="2">${SelectOptionsEnum[1]}</li>
+      <li class="prefer__select-list-item" data-value="3">${SelectOptionsEnum[2]}</li>
     </ul>`;
 
     return allMarkup;
   }
 
-  render() {
+  public render() {
     const allMarkup = this.createMarkup();
 
     this.#el!.innerHTML = allMarkup;

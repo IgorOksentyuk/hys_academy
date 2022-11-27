@@ -1,4 +1,4 @@
-import { SliderItem } from './@types/sliderItem';
+import { SliderItem } from './models/@types/sliderItem';
 
 export default class Slider {
   #el: HTMLDivElement | null = null;
