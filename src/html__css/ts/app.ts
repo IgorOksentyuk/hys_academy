@@ -9,14 +9,14 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 export default class App extends BaseApp {
-  #slider?: Slider;
-  #select?: Select;
+  public slider?: Slider;
+  public select?: Select;
 
   @ReadOnly
   init() {
     // Initialized all components.
-    this.#slider = new Slider('#slider');
-    this.#select = new Select('#select', this.getSliderData.bind(this));
+    this.slider = new Slider('#slider');
+    this.select = new Select('#select', this.getSliderData.bind(this));
     const storage = new Storage();
 
     this.getSliderData(1);
@@ -42,12 +42,11 @@ export default class App extends BaseApp {
       storage.setInputValue('email', emailInputTarget.value);
     });
 
-    nameInput.value = storage.getInputValue('inputName');
-    phoneInput.value = storage.getInputValue('phone-number');
-    emailInput.value = storage.getInputValue('email');
+    nameInput.value = storage.getInputValue<string>('inputName');
+    phoneInput.value = storage.getInputValue<string>('phone-number');
+    emailInput.value = storage.getInputValue<string>('email');
 
     form.addEventListener('submit', () => {
-      console.log('submitted');
       storage.clearInputValue('inputName');
       storage.clearInputValue('phone-number');
       storage.clearInputValue('email');
@@ -88,9 +87,9 @@ export default class App extends BaseApp {
         return response.json();
       })
       .then((data) => {
-        this.#slider?.setData(data.slice(0, 8));
+        this.slider?.setData(data.slice(0, 8));
 
-        this.#slider?.render();
+        this.slider?.render();
         this.onButtonsClick();
       })
       .catch((error) => {
@@ -104,11 +103,11 @@ export default class App extends BaseApp {
     const btnRight = document.querySelector('.circle.right');
 
     btnLeft?.addEventListener('click', () => {
-      this.#slider?.handleLeftClick();
+      this.slider?.handleLeftClick();
     });
 
     btnRight?.addEventListener('click', () => {
-      this.#slider?.handleRightClick();
+      this.slider?.handleRightClick();
     });
   }
 }
