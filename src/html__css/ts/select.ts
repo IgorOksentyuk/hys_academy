@@ -5,6 +5,7 @@ export default class Select implements ISelect {
   public readonly el: HTMLDivElement | null = null;
   public dropdownList: HTMLDivElement | null = null;
   public dropdownBtn: HTMLButtonElement | null = null;
+  public currentItem: HTMLDivElement | null = null;
 
   constructor(selector: string, onSelectChange: (albumId: number) => void) {
     this.el = document.querySelector(selector);
@@ -51,13 +52,24 @@ export default class Select implements ISelect {
     });
   }
 
+  public createListItems() {
+    const itemsLength = Object.values(SelectOptionsEnum).length / 2;
+    let allTemplate = ``;
+
+    for (let index = 0; index < itemsLength; index++) {
+      allTemplate += `<li class="prefer__select-list-item" data-value="${index + 1}">${
+        SelectOptionsEnum[index]
+      }</li>`;
+    }
+
+    return allTemplate;
+  }
+
   public createMarkup() {
     const allMarkup = `<button class="prefer__select-btn">${SelectOptionsEnum[0]}</button>
 
     <ul class="prefer__select-list">
-      <li class="prefer__select-list-item" data-value="1">${SelectOptionsEnum[0]}</li>
-      <li class="prefer__select-list-item" data-value="2">${SelectOptionsEnum[1]}</li>
-      <li class="prefer__select-list-item" data-value="3">${SelectOptionsEnum[2]}</li>
+      ${this.createListItems()}
     </ul>`;
 
     return allMarkup;
