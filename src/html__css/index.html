@@ -12,46 +12,45 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="header__icons">
+        <svg class="burger-icon" id="burger-icon" width="20" height="14">
+          <use xlink:href="sprite.svg#burger-icon"></use>
+        </svg>
+        <svg class="union-svg --icon-color" width="53.12" height="24" fill="#1B63F0">
+          <use xlink:href="/sprite.svg#union-icon"></use>
+        </svg>
+      </div>
+      <nav class="navigation">
         <div class="header__icons">
-          <svg class="burger-icon" id="burger-icon" width="20" height="14">
+          <svg class="burger-icon" id="burger-opened" width="20" height="14">
             <use xlink:href="sprite.svg#burger-icon"></use>
           </svg>
-          <svg class="union-svg --icon-color" width="53.12" height="24" fill="#1B63F0">
-            <use xlink:href="/sprite.svg#union-icon"></use>
+
+          <svg
+            class="union-svg --icon-color"
+            id="union-opened"
+            width="53.12"
+            height="24"
+            fill="#1B63F0"
+          >
+            <use xlink:href="sprite.svg#union-icon"></use>
           </svg>
         </div>
-        <nav class="navigation">
-          <div class="header__icons">
-            <svg class="burger-icon" id="burger-opened" width="20" height="14">
-              <use xlink:href="sprite.svg#burger-icon"></use>
-            </svg>
+        <svg class="cross" width="14" height="14">
+          <use xlink:href="sprite.svg#cross"></use>
+        </svg>
 
-            <svg
-              class="union-svg --icon-color"
-              id="union-opened"
-              width="53.12"
-              height="24"
-              fill="#1B63F0"
-            >
-              <use xlink:href="sprite.svg#union-icon"></use>
-            </svg>
-          </div>
-          <svg class="cross" width="14" height="14">
-            <use xlink:href="sprite.svg#cross"></use>
-          </svg>
+        <ul>
+          <li class="navigation__item"><a href="#prefer">Categories</a></li>
+          <li class="navigation__item"><a href="#courses">Course</a></li>
+          <li class="navigation__item"><a href="#tour">Explore</a></li>
+          <li class="navigation__item"><a href="#shy">Degrees</a></li>
+        </ul>
+      </nav>
+      <button class="button active">Explore</button>
+    </header>
 
-          <ul>
-            <li class="navigation__item"><a href="#prefer">Categories</a></li>
-            <li class="navigation__item"><a href="#courses">Course</a></li>
-            <li class="navigation__item"><a href="#tour">Explore</a></li>
-            <li class="navigation__item"><a href="#shy">Degrees</a></li>
-          </ul>
-        </nav>
-        <button class="button active">Explore</button>
-      </header>
-    </div>
     <main>
       <div class="container">
         <section class="education" id="education">
