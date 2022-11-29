@@ -119,6 +119,9 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  position: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  z-index: 5;
 
   &__icons {
     display: flex;
