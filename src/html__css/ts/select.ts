@@ -56,10 +56,8 @@ export default class Select implements ISelect {
     const itemsLength = Object.values(SelectOptionsEnum).length / 2;
     let allTemplate = ``;
 
-    for (let index = 0; index < itemsLength; index++) {
-      allTemplate += `<li class="prefer__select-list-item" data-value="${index + 1}">${
-        SelectOptionsEnum[index]
-      }</li>`;
+    for (let index = 1; index < itemsLength; index++) {
+      allTemplate += `<li class="prefer__select-list-item" data-value="${index}">${SelectOptionsEnum[index]}</li>`;
     }
 
     return allTemplate;
