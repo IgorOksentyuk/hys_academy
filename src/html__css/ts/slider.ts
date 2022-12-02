@@ -1,15 +1,15 @@
 import { SliderItem } from './models/@types/sliderItem';
 
 export default class Slider {
-  #el: HTMLDivElement | null = null;
-  #data: SliderItem[] | null = null;
-  #offset: number = 0;
+  private readonly el: HTMLDivElement | null = null;
+  private data: SliderItem[] | null = null;
+  private offset: number = 0;
   constructor(selector: string) {
-    this.#el = document.querySelector(selector);
+    this.el = document.querySelector(selector);
   }
 
   setData(data: SliderItem[] | null) {
-    this.#data = data;
+    this.data = data;
   }
 
   createSliderItemMarkup(obj: SliderItem) {
@@ -23,7 +23,7 @@ export default class Slider {
 
   createMarkup() {
     let itemsMarkup = ``;
-    this.#data?.forEach((item: SliderItem) => {
+    this.data?.forEach((item: SliderItem) => {
       itemsMarkup += this.createSliderItemMarkup(item);
     });
     const allMarkup = `<div class="circle left">
@@ -60,34 +60,34 @@ export default class Slider {
   render() {
     const allMarkup = this.createMarkup();
 
-    this.#el!.innerHTML = allMarkup;
+    this.el!.innerHTML = allMarkup;
     this.setOffset(0);
   }
 
   setOffset(offset: number) {
-    this.#offset = offset;
+    this.offset = offset;
     const sliderLine: HTMLDivElement | null = document.querySelector('#slider-line');
-    return (sliderLine!.style.transform = `translateX(${this.#offset}px)`);
+    return (sliderLine!.style.transform = `translateX(${this.offset}px)`);
   }
 
   handleLeftClick() {
-    if (this.#offset + 207 <= 0) {
-      this.setOffset(this.#offset + 207);
+    if (this.offset + 207 <= 0) {
+      this.setOffset(this.offset + 207);
     }
   }
 
   handleRightClick() {
     let maxLimit;
     if (window.innerWidth < 768) {
-      maxLimit = this.#data!.length * 207 - 207;
+      maxLimit = this.data!.length * 207 - 207;
     } else if (window.innerWidth > 768 && window.innerWidth < 1440) {
-      maxLimit = this.#data!.length * 207 - 2 * 207;
+      maxLimit = this.data!.length * 207 - 2 * 207;
     } else {
-      maxLimit = this.#data!.length * 207 - 4 * 207;
+      maxLimit = this.data!.length * 207 - 4 * 207;
     }
 
-    if (this.#offset - 207 >= -maxLimit) {
-      this.setOffset(this.#offset - 207);
+    if (this.offset - 207 >= -maxLimit) {
+      this.setOffset(this.offset - 207);
     }
   }
 }
