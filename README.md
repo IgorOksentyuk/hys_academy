@@ -1,4 +1,4 @@
-**One-page landing with various sections, blocks and cards. There are also two different sliders and pagination here.**
+**One-page _adaptive_ landing with with mobile menu, various sections, blocks and cards. There are also two different sliders and pagination here.**
 
 ---
 
