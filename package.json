@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/IgorOksentyuk/hys_academy/issues"
   },
-  "homepage": "https://github.com/IgorOksentyuk/hys_academy",
+  "homepage": "https://github.com/IgorOksentyuk/hys_academy/",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
