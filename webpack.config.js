@@ -75,7 +75,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'HYS Academy',
       filename: 'index.html',
-      template: 'src/html__css/index.html',
+      template: 'index.html',
     }),
     new SpriteLoaderPlugin(),
     new webpack.ProvidePlugin({
