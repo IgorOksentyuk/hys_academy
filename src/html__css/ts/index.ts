@@ -1,4 +1,4 @@
-import "../../../styles.scss";
+import "../styles/style.scss";
 
 import "../images/sprite.svg";
 import "../images/courses-block/woman-design.png";
